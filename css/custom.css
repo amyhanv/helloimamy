@@ -24,8 +24,13 @@ h1 {
   font-size: 3.5em;
 }
 
+.bg {
+  padding: 32px 15px 32px 15px;
+  border-radius: 2px;
+}
+
 p {
-  padding: 30px;
+  padding: 15px 25px 15px 25px;
   font-size: 1em;
   font-family: 'Anonymous Pro', sans-serif;
 }
