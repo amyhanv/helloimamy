@@ -1,2 +1,4 @@
 # helloimamy
-website
+My personal website- helloimamy.com
+
+:)
