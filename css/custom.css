@@ -22,19 +22,19 @@ body, html, .container-table {
 }
 
 .bg {
-  padding: 32px 15px 32px 15px;
+  padding: 32px 20px 32px 20px;
   display: inline-block;
-  max-width: 350px;
+  max-width: 330px;
 }
 
 h1 {
-  font-family:'Yeseva One', serif;
+  font-family:"heading",'Yeseva One', serif;
   font-size: 3.5em;
   padding-bottom: 7.5px;
 }
 
 p {
-  padding: 20px 15px 15px 20px;
+  padding: 22px 13px 15px 20px;
   text-align: left;
   font-size: 1em;
   font-family: 'Anonymous Pro', sans-serif;
@@ -56,7 +56,7 @@ li{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 11px;
-  font-family: 'Yeseva One', serif;
+  font-family: "heading", 'Yeseva One', serif;
   overflow: hidden;
   display: inline;
   color: #fff;
