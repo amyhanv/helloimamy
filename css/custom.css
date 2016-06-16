@@ -1,88 +1,39 @@
-
-body, html, .container-table {
-  background-color: #000;
-  color: #fff;
-	background-image: url("https://images.unsplash.com/photo-1458640904116-093b74971de9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=0c236f26de72aaa9e9ca10b4f0ea0cf6");
- 	background-repeat: no-repeat;
-  background-position: center top;
-  height: 100%;
-  margin:0;
-  padding: 0;
-  
-}
-.container-table {
-    display: table;
-}
-
-.vertical-center {
-  min-height: 100%;
-  min-height: 100vh; 
-  display: flex;
-  align-items: center;
-}
-
-.bg {
-  padding: 32px 20px 32px 20px;
-  display: inline-block;
-  max-width: 330px;
+html body {
+    margin:0;
+    padding: 0;
 }
 
 h1 {
-  font-family:"heading",'Yeseva One', serif;
-  font-size: 3.5em;
-  padding-bottom: 7.5px;
-}
-
-p {
-  padding: 22px 13px 15px 20px;
-  text-align: left;
-  font-size: 1em;
-  font-family: 'Anonymous Pro', sans-serif;
-}
-
-.lists {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  padding-top: 6px;
-}
-
-
-ul {
-  padding: 0;
-}
-
-li{
-  list-style-type: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 11px;
-  font-family: "heading", 'Yeseva One', serif;
-  overflow: hidden;
-  display: inline;
-  color: #fff;
-  margin-left: 0;
+    font-family: 'magnel';
+    font-size: 70px;
 
 }
-.link-spacing {
-  padding-right:14px;
-} 
 
-a {
-  color: #fff;
+.container {
+    background: url("/images/bg-header.jpeg");
+    height: 100%;
+    width: 100%;
+    overflow: auto;
 }
 
-a:hover {
-  text-decoration: none;
-  color: #ffe400;
+.center-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+    box-shadow: none;
+    width: 88vw;
+    height: 82vh;
+
 }
 
-a:focus {
-  text-decoration: none;
-  color: #ffe400;
-}
-
-
-.text-center {
-  text-align: center;
-  width: 100%;
+.content {
+    font-family: monospace;
+    /*border: 1px solid red;*/
+    color: #353535;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
