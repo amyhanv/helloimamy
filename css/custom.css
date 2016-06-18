@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-html body {
-    margin:0;
-    padding: 0;
-=======
+
 
 body, html  {
     margin:0;
@@ -45,7 +41,6 @@ body, html  {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
->>>>>>> b4f58dac406ef737633c1f9d20d900d4d3b461fc
 }
 
 hr {
@@ -55,41 +50,7 @@ hr {
     padding: 0;
 }
 h1 {
-<<<<<<< HEAD
-    font-family: 'magnel';
-    font-size: 70px;
 
-}
-
-.container {
-    background: url("/images/bg-header.jpeg");
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-}
-
-.center-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid #000;
-    box-shadow: none;
-    width: 88vw;
-    height: 82vh;
-
-}
-
-.content {
-    font-family: monospace;
-    /*border: 1px solid red;*/
-    color: #353535;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-=======
     background:url("https://images.unsplash.com/photo-1441906363162-903afd0d3d52?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d83f1814f65b48d3f22d31f53209ffb4");
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -231,4 +192,3 @@ a:focus {
     }
 
 }
->>>>>>> b4f58dac406ef737633c1f9d20d900d4d3b461fc
