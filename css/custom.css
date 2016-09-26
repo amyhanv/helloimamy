@@ -5,6 +5,11 @@
   /*true type for ttf*/
 }
 @font-face {
+  font-family: 'hensa';
+  src: url("../fonts/hensa.ttf") format('opentype');
+  /*true type for ttf*/
+}
+@font-face {
   font-family: 'kitten';
   src: url("../fonts/Kitten Swash-trial.ttf") format('opentype');
   /*true type for ttf*/
