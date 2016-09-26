@@ -1,15 +1,12 @@
-
-
 @font-face {
   font-family: 'hensa';
   src: url("../fonts/hensa.otf") format('opentype'), 
        url("../fonts/hensa.ttf") format('truetype');
 }
-@font-face {
+/*@font-face {
   font-family: 'kitten';
-  src: url("../fonts/Kitten Swash-trial.ttf") format('opentype');
-  /*true type for ttf*/
-}
+  src: url("../fonts/Kitten Swash-trial.ttf") format('opentype');*/
+/*}*/
 
 
 body, html  {
@@ -77,7 +74,7 @@ a .project-inner:hover {
     font-size: 100px;
     color:#4a1dff;
     width: 100%;
-    font-family: 'hensa', 'work sans';
+    font-family: 'hensa', 'Molle';
     font-weight: 400;
     white-space: nowrap
 
@@ -174,7 +171,7 @@ a .project-inner:hover {
     color:#4a1dff;
     text-align: center;
     float: none;
-    font-family: 'hensa', 'work sans';
+    font-family: 'hensa', 'Molle';
     margin: 0 auto;
     font-size: 50px;
     /*line-height: 90px;*/
