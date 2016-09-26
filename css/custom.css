@@ -144,6 +144,14 @@ a .project-inner:hover {
     padding: 0px 0 40px 0;
 }
 
+.plus {
+    width: 18px;
+    margin: 14px;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
 .butn {
     display: inline-block;
     margin: 0px 0 30px 0;
@@ -215,6 +223,7 @@ a .project-inner:hover {
     margin:10px; 
     height: 250px; 
     padding:30px 40px;
+    position: relative;
 }
 
 .footer .butn {
