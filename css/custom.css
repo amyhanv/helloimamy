@@ -292,11 +292,12 @@ a .project-inner:hover {
 .page-container {
     background-color: #e9fcf6;
     margin: 0;
+    width: 100%;
 }
 
 .home {
     font-size:16px;
-    margin: 20px;
+    margin: 20px 20px 28px 20px;
     color: black;
 }
 
