@@ -1,13 +1,9 @@
 
-@font-face {
-  font-family: 'hensa';
-  src: url("../fonts/hensa.otf") format('opentype');
-  /*true type for ttf*/
-}
 
 @font-face {
   font-family: 'hensa';
-  src: url("../fonts/hensa.otf") format('opentype'), url("../fonts/hensa.ttf") format('truetype');
+  src: url("../fonts/hensa.otf") format('opentype'), 
+       url("../fonts/hensa.ttf") format('truetype');
 }
 @font-face {
   font-family: 'kitten';
