@@ -78,7 +78,7 @@ a .project-inner:hover {
     color:#4a1dff;
     width: 100%;
     font-family: 'hensa', 'work sans';
-    font-weight: 600;
+    /*font-weight: 600;*/
     white-space: nowrap
 
 }
