@@ -1,7 +1,7 @@
 
 
 @font-face {
-  font-family: 'hensa';
+  font-family: hensa;
   src: url("../fonts/hensa.otf") format('opentype'), 
        url("../fonts/hensa.ttf") format('truetype');
 }
@@ -171,10 +171,6 @@ a .project-inner:hover {
 .section-padding{
     padding: 80px 0;
 
-}
-
-.bio .row {
-    padding: 0 34px;
 }
 
 .section-header {
