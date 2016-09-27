@@ -1,5 +1,14 @@
 
 
+@font-face {
+  font-family: 'hensa';
+  src: url("../fonts/Hensa.otf") format('opentype'), 
+       url("../fonts/Hensa.ttf") format('truetype');
+}
+/*@font-face {
+  font-family: 'kitten';
+  src: url("../fonts/Kitten Swash-trial.ttf") format('opentype');*/
+/*}*/
 
 
 body, html  {
