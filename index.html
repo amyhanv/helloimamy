@@ -23,6 +23,8 @@
 
 
 <body>
+	<script>document.body.className += ' fade-out';</script>
+	
 	<div class = "hero-container">
 		<div id= "hero-content" class = "center-screen">
 			<div class = "text-center center-screen">
@@ -142,6 +144,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
+	<!-- page fade in transitiion -->
+	<script type="text/javascript">
+	$(function() {
+    $('body').removeClass('fade-out');
+});</script>
 </body>
 </html>
