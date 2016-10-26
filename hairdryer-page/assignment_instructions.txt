@@ -1,0 +1,38 @@
+Instructions for Web Builder Assessment Assignment:
+
+SUMMARY:
+
+Create a simple, responsive, eye-pleasing product page for an imagined e-commerce store. Include a simple header (no need for account management buttons or anything like that, unless you feel like it) and the detailed product section. The site, named Aeolian, is geared towards 30 - 60 year old professional women. It sells high-end blow dryers to salon owners and individuals who really appreciate a good blow dryer. 
+
+REQUIREMENTS:
+
+1. Responsive
+2. Use Twitter Bootstrap grid system
+
+OBJECTIVES:
+1. Using Photoshop or GIMP, add the Ebay logo (provided) to the blow dryer, so that it looks like an Ebay brand blow dryer. Colour and placement of the logo (so long as it’s actually on the blow dryer) is up to you.
+2. Colour the Aeolian logo provided, and use it in the page design.
+3. Header section (logo, simple nav)
+4. Product details section with the following elements:
+- Photo
+- 'Purchase' button
+- Color picker (for the product - does not need to work, but if you want to have it swap images, feel free to do so (this would require recolouring the provided image))
+- Price
+- Quantity selector or text field
+- Category or categories
+- Product description (please write one! It doesn't have to be accurate or true.)
+- Rating (could be stars, could be numbers, could be tomatoes).
+
+ASSETS PROVIDED:
+- Bootstrap boilerplate
+- Blow dryer product photo
+- EBAY logo
+
+ADDITIONAL INFO:
+
+For the page layout and design - you are welcome to use any tools you like or inspiration from other sites. If you do use other sites for inspiration, please list them (no judgement, I would do it!).
+You're welcome to expand on the page as much as you like. You can use any outside libraries you like (e.g. font-awesome, js plugins, etc).
+
+TIME LIMIT:
+
+You can take as much time as you like. If it works and looks awesome after an hour, that's great. If it takes 3 hours, that's great too. It's the finished product that matters most.

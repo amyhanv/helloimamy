@@ -1,0 +1,327 @@
+
+/* =========================================================================
+   Amy's CSS Custom Styles
+=========================================================================
+*/
+
+.helloimamy-container {
+    background-color: #fff;
+}
+
+.butn {
+    display: inline-block;
+    margin: 0px 0 30px 0;
+    /*-webkit-border-radius: 50px;*/
+    /*border-radius: 50px;*/
+    padding: 10px 0px;
+    border-bottom: 2px solid #000 !important;
+}
+
+.home {
+    font-size:16px;
+    margin: 20px 20px 28px 20px;
+    color: black;
+}
+
+.website-border {
+    border-top: 1px solid #000;
+}
+
+
+/*bootstrap changes*/
+.navbar-default {
+    margin-top:80px;
+    color: #555;
+    border:none;
+    box-shadow: none;
+    background-image: none;
+    background:#fff;
+    padding: 10px 40px;
+
+}
+
+.form-control {
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid #000;
+    box-shadow: none;
+    border-radius: 0;
+
+}
+
+.glyphicon-heart {
+    margin: 5px;
+}
+
+#select-blue {
+    background: #4094d5;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 0px;
+}
+#select-pink {
+    background: #d793e2;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 0px;
+}
+#select-black {
+    background: #5f656a;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 0px;
+}
+.btn-primary {
+    /*filled in button*/
+    box-sizing: border-box;
+    background: none;
+    background-color: #9ea1f5;
+    border: 1px solid  #9ea1f5;
+    border-radius: 0;
+    padding: 10px 20px;
+    margin-right: 10px;
+    box-shadow: none;
+
+}
+.btn-clean {
+    margin: 0;
+    border-radius: 0;
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+
+}
+.btn-buy {
+    font-weight: 900;
+    width: 100%;
+    border-radius: 0;
+    margin-top: 20px;
+    padding: 10px 0;
+    color: #000;
+    border: 1px solid #000;
+    box-sizing: border-box;
+
+}
+#select-blue:hover {
+    background: #2a6491;
+}
+#select-pink:hover {
+    background: #8c4498;
+}
+#select-black:hover {
+    background: #323639;
+}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active  {
+    border: 1px solid #9ea1f5;
+    background-color: #fff;
+    color: #9ea1f5;
+
+}
+.btn-clean:hover,.btn-clean:focus,.btn-clean:active   {
+    border: 1px solid #9ea1f5;
+    background-color: #9ea1f5;
+    color: #fff;
+}
+.btn-buy:hover ,.btn-buy:focus,.btn-buy:active  {
+    border: 1px solid #9ea1f5;
+    background-color: #9ea1f5;
+    color: #fff;
+}
+
+
+.navbar-default .navbar-nav>li>a{
+    color:#9ea1f5;
+}
+
+.container {
+    padding: 40px 80px;
+}
+
+.col-md-4 {
+    padding: 30px;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Lato";
+
+}
+
+a {
+    color:#9ea1f5;
+}
+
+a:hover{
+  text-decoration: none;
+  -webkit-transition: all .25s ease-in-out;
+       -moz-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+         -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+}
+
+hr {
+    border-top: 3px solid #9ea1f5;
+    margin-left:0;
+    width: 110px;
+
+}
+
+.white-hr {
+    border-top: 3px solid #fff;
+}
+
+.logo {
+    /*Aeolian logo*/
+    width: 120px;
+    height: auto;
+    padding: 10px 0 10px 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+.hero-content {
+    position: absolute;
+    padding-left: 50px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+.hero-content h1 {
+    color: #fff;
+    font-size: 46px;
+    letter-spacing: 2px;
+    font-family: "Lora", serif;
+
+}
+.hero-content p {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+#hero-section {
+    width: 100%;
+    height: 100vh;
+    background-color:#fff;
+    background-image:linear-gradient( rgba(40, 25, 48, 0.6), rgba(40, 25, 48, 0.6) ), url("https://images.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d310b05f9c9d755fe5608e02ed3dc16b");
+    background-position: center top;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+
+}
+
+.cta {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.title {
+    letter-spacing: 2px;
+    font-family: "Lora", serif;
+}
+
+.pad-top {
+    padding-top: 80px;
+}
+
+
+#description {
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+#about-product h3 {
+    padding-top: 15px;
+    font-family: "Lora", serif;
+}
+#drier {
+    padding: 40px;
+    max-width: 380px;
+    vertical-align: middle;
+}
+
+#about-product {
+    padding-bottom: 80px;
+}
+
+#ratings-section {
+    background-color: #b0b2fb;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+}
+#ratings-section h1, #ratings-section p {
+    color: #fff;
+}
+#review h4{
+    letter-spacing: 1px;
+    line-height:35px;
+}
+
+#footer {
+    background: #f1eff4;
+}
+
+.fa{
+    font-size: 22px !important;
+    padding:  5px;
+    border: 1px solid  #b0b2fb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 30px;
+}
+.fa:hover{
+    color: #fff;
+    border: 1px solid #b0b2fb;
+    background-color: #b0b2fb;
+    -webkit-transition: all .25s ease-in-out;
+         -moz-transition: all .25s ease-in-out;
+          -ms-transition: all .25s ease-in-out;
+           -o-transition: all .25s ease-in-out;
+              transition: all .25s ease-in-out;
+}
+
+/*Media tags for better alignment, positioning, and layout*/
+
+@media (max-width: 600px) {
+
+    .hero-content {
+        padding-top: 50px;
+    }
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    .drier {
+        padding: 0px;
+        max-width: 200px;
+        margin-top: 25px;
+    }
+
+    #description {
+        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .container {
+        padding: 20px 40px;
+    }
+
+    #ratings-section {
+        background-color: #b0b2fb;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
