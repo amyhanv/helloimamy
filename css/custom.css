@@ -71,7 +71,7 @@ hr {
 
 a .project-inner:hover {
     -webkit-transition: all .6s ease-out;
-    background-color: #e1f7f1;
+    background-color: #E8FBF6;
 }
 
 .hero-container a:hover, .footer a:hover {
@@ -107,15 +107,13 @@ a .project-inner:hover {
     margin: 0 auto;
     font-family: 'work sans', sans-serif;
     font-size: 17px
-
-
 }
 
 
 .hero-container {
     height: 100vh;
     /*background: url("../images/02.jpg");*/
-    background-position: 78% 83%;
+    /*background-position: 78% 83%;*/
     background-color: #fff;
     width: 100%;
 
@@ -175,7 +173,11 @@ a .project-inner:hover {
 
 .about {
     padding: 40px 0;
-    background-color: #fafafa;
+    background: #f6fdfb;
+    background: -webkit-linear-gradient(#fff, #f6fdfb); 
+    background: -o-linear-gradient(#fff, #f6fdfb); 
+    background: -moz-linear-gradient(#fff,#f6fdfb); 
+    background: linear-gradient(#fff, #f6fdfb); 
 }
 
 .section-padding{
@@ -196,11 +198,7 @@ a .project-inner:hover {
 }
 
 .portfolio {
-    background: -webkit-linear-gradient(#fff, #f0fcf9); 
-    background: -o-linear-gradient(#fff, #f0fcf9); 
-    background: -moz-linear-gradient(#fff,#f0fcf9); 
-    background: linear-gradient(#fff, #f0fcf9); 
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
 }
 
 .project-header{
@@ -230,6 +228,15 @@ a .project-inner:hover {
     height: 250px; 
     padding:30px 40px;
     position: relative;
+    /*gradient box left-right*/
+    background: #E8FBF6;
+    background: -webkit-linear-gradient(legacy-direction(35deg), #E8FBF6 0%, rgba(255,255,255,0) 75%);
+    background: -webkit-linear-gradient(55deg, #E8FBF6 0%, rgba(255,255,255,0) 75%);
+    background: linear-gradient(35deg, #E8FBF6 0%, rgba(255,255,255,0) 75%);
+}
+
+.footer {
+
 }
 
 .footer .butn {
