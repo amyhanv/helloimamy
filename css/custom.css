@@ -1,9 +1,9 @@
 
 
 @font-face {
-  font-family: 'hensa';
-  src: url("../fonts/Hensa.otf") format('opentype'), 
-       url("../fonts/Hensa.ttf") format('truetype');
+  font-family: 'circular';
+  src: url("../fonts/CircularStd-Bold.otf") format('opentype'); 
+
 }
 /*@font-face {
   font-family: 'kitten';
@@ -44,24 +44,32 @@ a:visited, a:hover, a:link, a:active, .project-box a:active , p a:hover{
 
 }
 
-hr {
-    border-top: 2px solid #4a1dff !important;
-    width: 50px;
-    margin-top: 0 !important;
 
+ #links  {
+    margin: 15px 0;
+ }
+
+.special-fa{
+    color:#000;
+    margin: 10px;
+   font-size: 19px;
+ 
 }
 
-#links a {
-    color:#4a1dff;
-    font-size: 20px;
-    padding:12px;
-    
+#first-fa {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
 }
 
 .project-box a {
     color: #8ed5c3;
     font-size: 16px;
 
+}
+
+#hero-right-content a {
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .project-box a:hover {
@@ -81,23 +89,25 @@ a .project-inner:hover {
 
 .hero-container h1 {
 /*im amy*/
-    margin-bottom: 0em;
-    /*text-shadow: 2px 2px 0px #fff , 6px 6px 0px #b8e6db;*/
-    font-size: 100px;
-    color:#4a1dff;
-    width: 100%;
-    font-family: 'hensa', 'work sans';
-    font-weight: 400;
-    white-space: nowrap
 
+    /*text-shadow: 2px 2px 0px #fff , 6px 6px 0px #b8e6db;*/
+    font-size: 99px;
+    color:#4a1dff;
+    font-family: 'circular', 'work sans';
 }
 .hero-container h2 {
 /*hello*/
     color: #000;
     font-family: 'work sans', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
 
+}
+
+.hero-container img {
+    width: 26px;
+    padding: 30px 0 0 4px;
 }
 .hero-container h3, .hero-container a, .footer a {
 /*contact me*/
@@ -111,21 +121,36 @@ a .project-inner:hover {
 
 
 .hero-container {
+    padding: 20px;
     height: 100vh;
+    background: #f6fdfb;
+    position: relative;
     /*background: url("../images/02.jpg");*/
     /*background-position: 78% 83%;*/
-    background-color: #fff;
+
     width: 100%;
+
+
 
 }
 
+.vertical-c {
+    /*vertical centering*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-#hero-content {
-    height: 320px;
-    width: 320px;
+#hero-left-content {
     /*background: -webkit-linear-gradient(#000,#777);*/
     /*border: 9px solid #000;*/
 }
+
+#hero-right-content {
+    padding: 35px 0 0 20px;
+}
+
+
 
 
 .center-screen{
@@ -162,22 +187,27 @@ a .project-inner:hover {
 
 .butn {
     display: inline-block;
+    /*-webkit-border-radius: 50px;*/
+    /*border-radius: 50px;*/
+
+}
+
+.butn {
+    display: inline-block;
     margin: 0px 0 30px 0;
     /*-webkit-border-radius: 50px;*/
     /*border-radius: 50px;*/
     padding: 10px 0px;
     border-bottom: 2px solid #000 !important;
-
-
 }
 
 .about {
     padding: 40px 0;
-    background: #f6fdfb;
+/*    background: #f6fdfb;
     background: -webkit-linear-gradient(#fff, #f6fdfb); 
     background: -o-linear-gradient(#fff, #f6fdfb); 
     background: -moz-linear-gradient(#fff,#f6fdfb); 
-    background: linear-gradient(#fff, #f6fdfb); 
+    background: linear-gradient(#fff, #f6fdfb); */
 }
 
 .section-padding{
@@ -189,9 +219,9 @@ a .project-inner:hover {
     color:#4a1dff;
     text-align: center;
     float: none;
-    font-family: 'hensa', 'work sans';
+    font-family: 'circular', 'work sans';
     margin: 0 auto;
-    font-size: 50px;
+    font-size: 46px;
     /*line-height: 90px;*/
     padding: 20px 0 30px 0;
 
@@ -348,6 +378,12 @@ a .project-inner:hover {
 /*media queries*/
 @media screen and (max-width: 1024px){
 }
+@media screen and (max-width: 992px){
+    .hero-container img {
+        display: none;
+    }
+}
+
 
 @media screen and (max-width: 768px){
     .content {
