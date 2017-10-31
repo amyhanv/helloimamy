@@ -40,7 +40,7 @@ a, a .fa {
     transition: 0.5s;
 }
 a:hover, a .fa:hover { 
-    color: red !important; 
+    color: #2900ff !important; 
     text-decoration: none !important;
 }
 .circular { font-family: 'circular',sans-serif !important;}
@@ -90,6 +90,14 @@ a:hover, a .fa:hover {
     line-height: 1.4;
 }
 
+.my-h2 {
+    font-size: 2em;
+    font-family: 'Varela';
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin: 30px 0;
+}
+
 
 .showshit {
     /*height: 400px;*/
@@ -121,6 +129,38 @@ a:hover, a .fa:hover {
     width: 800px;
 }
 
+.projects{
+    margin: 100px 0;
+}
+
+.projects hr {
+    border-top: 1px dashed red;
+    width: 80%;
+    /*display: block;*/
+    margin: 90px 0;
+}
+
+#project-1 {
+    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
+    height: 300px;
+    background-color: #fff;
+}
+
+#project-2 {
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
+    height: 300px;
+
+
+}
+#project-3 {
+    background-color: pink;
+    margin-top: 30px;
+    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
+    height: 300px;
+
+}
 
 footer {
     width: 100%;
@@ -176,3 +216,42 @@ footer div { display: inline-block;}
 
 @media screen and (max-width: 320px){
 }
+
+
+
+
+
+
+/*--------
+404 page
+--------*/
+
+.error-page {
+    font-family: 'Karla', sans-serif;
+}
+
+.error-page .center-xy {
+  position:absolute;
+  top:50%;
+  left:50%;
+  padding:15px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.error-page h5 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.error-page #back {
+    border-bottom: 1px solid #999;
+    padding-bottom: 5px;
+}
+.error-page #back:hover {
+    border-bottom: 1px solid #2900ff;
+}
+
+
