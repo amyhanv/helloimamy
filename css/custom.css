@@ -50,6 +50,14 @@ a:hover, a .fa:hover {
     font-family: 'Karla', sans-serif;
 }
 
+.nav #logo {
+    position: fixed;
+    z-index: 99;
+    /*background-color: #fff;*/
+    padding: 40px;
+
+}
+
 .nav {
     margin: 40px 0;
 }
@@ -128,11 +136,20 @@ a:hover, a .fa:hover {
     font-weight: 300;
     width: 800px;
 }
-
+.row-auto {
+    margin: 0 auto !important;
+}
 .projects{
     margin: 100px 0;
 }
+.projects .card:hover {
 
+}
+
+.projects .col-md-6 {
+}
+.no-pad-right { padding-right: 0 !important;}
+.no-pad-left { padding-left: 0 !important;}
 .projects hr {
     border-top: 1px dashed red;
     width: 80%;
@@ -140,26 +157,64 @@ a:hover, a .fa:hover {
     margin: 90px 0;
 }
 
-#project-1 {
-    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
-    height: 300px;
-    background-color: #fff;
+.hover-trans {
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
+
+#project-1 {
+    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.38);
+    height: auto;
+    padding: 15px;
+    background-color: #fff;
+    /*padding-left: 0;*/
+    
+}
+#project-1:hover,
+#project-2:hover { padding: 0;}
+
+
+#project-1 > img:hover{
+    /*-moz-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);*/
+}
+
+.projects img {
+    width: 100%;
+    /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    /*filter: grayscale(100%);*/
+}
+
+
 
 #project-2 {
     background-color: #fff;
-    margin-top: 30px;
-    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
-    height: 300px;
+    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.38);
+    height: auto;
+    padding: 15px;
 
 
 }
 #project-3 {
     background-color: pink;
-    margin-top: 30px;
     box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
     height: 300px;
 
+}
+
+
+.projects #projects-cta {
+    vertical-align: middle;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 30px;
+    margin: 20px 0;
+    border: none;
+    color: blue;
+    /*border: 1px solid blue;*/
+    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
 }
 
 footer {
