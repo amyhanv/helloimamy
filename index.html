@@ -11,95 +11,96 @@
     <link href = "css/custom.css" rel ="stylesheet">
 
     <!--Fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Karla|Varela" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Karla" rel="stylesheet">
     <!-- Bootstrap Business -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
 
+	<!-- Emoji CSS -->
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 </head>
 <body>
-	<script>document.body.className += ' fade-out';</script>
-
-	
 
 	<div class="helloimamy">
-		<div class="container container-fluid">
+		<div class="container">
 			<header class="nav">
-				<span id="">Amy Hanvoravongchai</span>
+				<span id="amy">Amy Hanvoravongchai</span>
 				<ul>
-					<a href=""><li>Projects</li></a>
-					<a href=""><li>Contact</li></a>
-					<a href=""><li>Résumé</li></a>
+					<!-- <a href="/projects" class=""><li>Projects</li></a> -->
+					<a href=""><li id="resume-icon"><i class="em em-page_facing_up"></i></li></a>
+					<a href="files/AmyHanRESUME.pdf" class=""><li id="resume-txt">Résumé</li></a>
 				</ul>
 			</header>
 
 			<div class="contents">
 				<div class="intro">
 					<h1 class ="my-h1">I thoroughly enjoy webdev, <br>design, and doodling in notebooks</h1>
-				</div>
+				
 
-				<div class="showshit">
-					<!-- <img src="images/placeholder.jpg"/> -->
-				</div>
+					<div class="bio">
+						<!-- <img class="icon" src="images/smiley.png"/ > -->
+						<!-- <h1 class="my-h1">What's up?</h1> -->
+						<p>
+							Hello I'm Amy! <i class="em em-wave"></i> I'm currently studying computer science at the University of Victoria. I put good faith in kick ass design and aesthetics. I really like web development, typography, graphic design, hand lettering, and motorcycling. 
 
-				<div class="bio">
-					<!-- <img class="icon" src="images/smiley.png"/ > -->
-					<!-- <h1 class="my-h1">What's up?</h1> -->
-					<p><br>Hello I'm Amy! I'm currently studying computer science at the University of Victoria. I put good faith in kick ass design and aesthetics. I really like web development, graphic design, hand lettering, and motorcycling. </p>
-				</div>
+						</p>
+						<!-- <a href=""><div class="shadow-cta lift-hover">Get in touch <span class="cta-emoji"><i class="em em-wave"></i></span></div></a> -->
+
+					</div>
+				</div> <!-- end intro -->
 
 				<div class="projects">
 					<h1 class ="my-h2">Some things I've been working on</h1>
 					
-					<div class="row row-auto" style="height:355px;">
-						<a href="#" class="card">
-							<div class ="col-md-6 no-pad-left">
-								<div id="project-1" class="hover-trans">
-									<img src="https://images.unsplash.com/photo-1496626868305-15f52fa605b7?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+					<div class="project-card">
+						<a href="https://memospace.herokuapp.com/">
+							<div class ="card half-width" id="card-pad-right">
+								<div id="project-1" class="lift-hover">
+									<img src="images/memo_space-shot.png" />
 								</div>
 							</div>
 						</a>
-						<a href="#" class="card">
-							<div class ="col-md-6 no-pad-right" >
-								<div id="project-2" class="hover-trans">
-									<img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+						<a href="https://github.com/amyhanv/ss_assignment">
+							<div class ="card half-width" id="card-pad-left">
+								<div id="project-2" class="lift-hover">
+									<img src="images/mock-shot.png" />
 								</div>
 							</div>
 						</a>
 					</div>
-					<div class="row row-auto">
-						<div class ="col-md-6 no-pad-left">
-							<button id="projects-cta"><span>View more</span>  →</button>
-						</div>
-						<div class="col-md-6"></div>
+
+					<div id="cta-container">
+						
+						<a href="https://github.com/amyhanv"><div class="more-cta">View more <i class="em em-point_right"></i></div></a>
+						
 					</div>
+					<!-- <div id="projects-cta" class="">View more <i class="em em-eyes"></i></div> -->
+					
 
 
 				</div><!-- end projects -->
 
 
+
+
+				<footer>
+					<div> <span><a href="mailto:amy.hanv@gmail.com">amy.hanv@gmail.com</a></span> </div>
+					<div class="social-medias">
+						<a href ="https://twitter.com/amyhanv/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+						<a href ="https://github.com/amyhanv"><i class="fa fa-github" aria-hidden="true"></i></a>
+						<a href ="https://behance.net/amyhanv"><i class="fa fa-behance" aria-hidden="true"></i></a>
+						<a href ="https://dribbble.com/helloimamy"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+					</div>
+				</footer>
+
+
 			</div><!-- end contents -->
 
-			
+		</div><!-- end container /cf -->
 
-
-			<footer>
-				<div> <span><a href="mailto:amy.hanv@gmail.com">amy.hanv@gmail.com</a></span> </div>
-				<div class="social-medias">
-					<a href ="https://twitter.com/amyhanv/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-					<a href ="https://github.com/amyhanv"><i class="fa fa-github" aria-hidden="true"></i></a>
-					<a href ="https://behance.net/amyhanv"><i class="fa fa-behance" aria-hidden="true"></i></a>
-					<a href ="https://dribbble.com/helloimamy"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-				</div>
-			</footer>
-		</div>
-
-
-
-	</div>
-
+	</div><!-- end helloimamy div -->
 
 
 
@@ -110,10 +111,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<!-- page fade in transitiion -->
-	<script type="text/javascript">
-	$(function() {
-    $('body').removeClass('fade-out');
-});</script>
+
+
+
+
 </body>
 </html>
