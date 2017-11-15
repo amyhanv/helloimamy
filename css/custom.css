@@ -1,37 +1,67 @@
+/*
+. Amy Hanvoravongchai
+. Stylesheet for helloimamy.com index, 404 page
+*/
 
 
+
+
+
+
+/* Animations ----------------------------------- */
+
+@-webkit-keyframes fadeup {
+    0%     { opacity: 0; -webkit-transform: translate(0px, 20px);}
+}
+@-moz-keyframes fadeup {
+    0%     { opacity: 0; -moz-transform: translate(0px, 20px);}
+}
+@keyframes fadeup {
+    0%    { opacity: 0; transform: translate(0px, 20px);}
+}
+
+/* end Animations */ 
+
+
+
+/* Typeface ----------------------------------- */ 
 @font-face {
-  font-family: 'circularB';
-  src: url("../fonts/CircularStd-Bold.otf") format('opentype'); 
+  font-family: 'Brandon';
+  font-weight: 700;
+  src: url("../fonts/Brandon_bld.otf") format('opentype'); 
 
 }
 @font-face {
-  font-family: 'circular';
-  src: url("../fonts/CircularStd-Book.otf") format('opentype');
+  font-family: 'Brandon';
+  font-weight: 500;
+  src: url("../fonts/Brandon_med.otf") format('opentype');
 }
+.circular { font-family: 'circular',sans-serif !important;}
 
-body, html  {
+/* end Typeface */ 
+
+
+/* General/Globals ----------------------------------- */
+
+body, 
+html  {
     margin:0;
     padding: 0;
-}
-
-/*opening fade-in*/
-body {
-    opacity: 1;
-    transition: 1.6s opacity;
-}
-body.fade-out {
-    opacity: 0;
-    transition: none;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
     padding: 0;
     margin: 0;
+    background-color: #fff;
 }
-a, a .fa {
+
+a {}
+
+a, 
+a .fa {
     text-decoration: none;
+     font-size: 1.125em !important;
     color: #000 !important;
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -40,18 +70,111 @@ a, a .fa {
     transition: 0.5s;
 }
 a:hover, a .fa:hover { 
-    color: #2900ff !important; 
+    color: red !important; 
     text-decoration: none !important;
 }
-.circular { font-family: 'circular',sans-serif !important;}
 
-
+.container {
+    padding: 0 60px;
+}
 .helloimamy {
     font-family: 'Karla', sans-serif;
 }
 
+.my-h1 {
+    font-size: 3.5em;
+    /*font-family: 'Varela';*/
+    font-family: 'Brandon';
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #000;
+
+}
+
+.my-h2 {
+    font-size: 2em;
+    /*font-family: 'Varela';*/
+    font-family: 'Brandon';
+    line-height: 1.4;
+    margin: 0 0 30px 0;
+    font-weight: 500;
+    color: #000;
+}
+
+.row-auto {
+    margin: 0 auto !important;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.contents {
+    animation: fadeup 1.5s;
+    -webkit-animation: fadeup 1.5s;
+    -moz-animation: fadeup 1.5s;
+}
+/* end General */ 
+
+
+
+
+/* Buttons ----------------------------------- */
+.shadow-cta { 
+    /*get in touch button*/
+    
+    /* page load animation */
+    animation: fadeup 1.6s;
+    -webkit-animation: fadeup 1.6s;
+    -moz-animation: fadeup 1.6s;
+    /*transition: transform .3s ease-out;*/
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 1.125em;
+    background-color: #fff;
+    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.38);
+}
+.shadow-cta:hover {
+    /*box-shadow: 3px 15px 35px rgba(0, 0, 0, 0.38);*/
+}
+
+/*hover applied to projects card*/
+.lift-hover { transition: transform .3s ease-out;  }
+.lift-hover:hover{ transform: translate(0, -5px);}
+
+
+/*view more button*/
+.more-cta {
+    margin-top: 40px;
+    border: none;
+    /*transition: border .3s ease;*/
+    padding-bottom: 6px;
+    display: inline-block;
+}
+.more-cta i {
+    transition: padding .3s ease;
+}
+.more-cta:hover > i{ 
+   padding-left: 3.5em;
+}
+.more-cta i { padding-left: 1.5em;}
+
+
+
+/* end Buttons */
+
+
+/* Nav ----------------------------------- */
+.nav #logo {
+    position: fixed;
+    z-index: 99;
+    /*background-color: #fff;*/
+    padding: 40px;
+}
+
 .nav {
-    margin: 40px 0;
+    margin: 55px 0;
 }
 
 .nav span { 
@@ -59,6 +182,7 @@ a:hover, a .fa:hover {
     /*color: blue;*/
     /*font-style: italic;*/
     /*font-weight: 900;*/
+    font-size: 1.125em;
 
 }
 .nav ul {
@@ -75,37 +199,30 @@ a:hover, a .fa:hover {
     /*border-bottom: 2px solid pink;*/
 }
 
-.contents {
-    margin: 0 50px;
+.nav #amy { 
+    /*ont-family: 'Brandon';*/
+    /*font-weight: 800;*/
+    /*color: #355dff;*/
+    font-size: 1.125em !important;
+    /*letter-spacing: 1px;*/
 }
 
+.nav #resume-icon { display: none;}
+.nav #resume-txt { display: unset;}
+
+/* end Nav */
+
+
+
+/* Intro (hero) ----------------------------------- */
 .intro {
-    margin: 7em 0 0 0;
+    margin: 6em 0;
 }
 
-.my-h1 {
-    font-size: 4em;
-    font-family: 'Varela';
-    letter-spacing: 3px;
-    line-height: 1.4;
-}
-
-.my-h2 {
-    font-size: 2em;
-    font-family: 'Varela';
-    letter-spacing: 1px;
-    line-height: 1.4;
-    margin: 30px 0;
-}
-
-
-.showshit {
-    /*height: 400px;*/
-    /*background-color: pink;*/
-}
-
-.showshit img {
-    width: 100%;
+.underline-link {
+    color: #2900ff;
+    border-bottom: 2px solid #2900ff;
+    padding-bottom: 10px;
 }
 
 .icon { 
@@ -115,7 +232,6 @@ a:hover, a .fa:hover {
 
 .bio { 
     /*margin-top: 10em;*/
-
 }
 
 .bio h2 {
@@ -123,46 +239,131 @@ a:hover, a .fa:hover {
     font-weight: 700;
 }
 .bio p {
-    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.125em;
     line-height: 1.8;
     font-weight: 300;
-    width: 800px;
+    width: 730px;
 }
 
+.em-wave { 
+    -webkit-animation-name: wave;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-duration: 1.2s; 
+       -moz-animation-duration: 1.2s;
+         -o-animation-duration: 1.2s;
+            animation-duration: 1.2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+.em-wave:hover {
+    
+    -webkit-animation-name: wave;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-duration: 0.5s; 
+       -moz-animation-duration: 0.5s;
+         -o-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes wave {
+    0% { 
+        -ms-transform: rotate(24deg); 
+        -webkit-transform: rotate(24deg); 
+        transform: rotate(24deg);
+    }
+    50% {
+        -ms-transform: rotate(-1deg); 
+        -webkit-transform: rotate(-1deg); 
+        transform: rotate(-1deg);
+    }
+    100% { 
+        -ms-transform: rotate(24deg); /* IE 9 */
+        -webkit-transform: rotate(24deg); /* Chrome, Safari, Opera */
+        transform: rotate(24deg);
+    }
+}
+
+
+/* end Intro */
+
+
+/* Projects ----------------------------------- */
 .projects{
-    margin: 100px 0;
+    margin: 6em 0;
+    /* page load animation */
+    animation: fadeup 1.6s;
+    -webkit-animation: fadeup 1.6s;
+    -moz-animation: fadeup 1.6s;
+
 }
 
-.projects hr {
-    border-top: 1px dashed red;
-    width: 80%;
-    /*display: block;*/
-    margin: 90px 0;
+.card  { 
+    box-sizing: border-box;
+    float: left;
 }
 
+#card-pad-right { padding-right: 5px; }
+#card-pad-left { padding-left: 5px; }
 #project-1 {
-    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
-    height: 300px;
+    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.38);
+    height: auto;
+    padding: 0.8em;
     background-color: #fff;
+    /*padding-left: 0;*/
+
+    
 }
+
+#project-1 > img:hover{
+    /*-moz-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);*/
+}
+
+.projects img {
+    width: 100%;
+    /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    /*filter: grayscale(100%);*/
+}
+
 
 #project-2 {
     background-color: #fff;
-    margin-top: 30px;
-    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
-    height: 300px;
-
-
-}
-#project-3 {
-    background-color: pink;
-    margin-top: 30px;
-    box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);
-    height: 300px;
-
+    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.38);
+    height: auto;
+    padding: 0.8em;
 }
 
+
+
+.projects #projects-cta {
+    
+    width: 100%;
+    /*padding: 20px 0;*/
+    margin-top: 60px;
+    font-size: 1.125em;
+
+    /*border: none;*/
+    /*color: blue;*/
+    /*border: 1px solid blue;*/
+    /*box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);*/
+}
+
+
+.projects #cta-container {
+    /*margin-top: 3em;*/
+    /*clear: both !important;*/
+}
+/* end Projects */
+
+
+/* Footer ----------------------------------- */
 footer {
+    
     width: 100%;
     margin: 100px 0;
 }
@@ -174,22 +375,30 @@ footer div { display: inline-block;}
     font-size: 21px;
     display: inline-block;
 }
+/* end Footer */
 
+
+
+/* Queries ----------------------------------- */
 @media screen and (max-width: 1024px){
     .my-h1 { 
-        font-size: 30px;
+        font-size: 2em;
         line-height: normal;
+        letter-spacing: 0.5px;
     }
     .bio p { width: auto;}
 }
 @media screen and (max-width: 992px){
-
     .contents { margin: 15px;}
-    .intro h1 br { display: none;}
+    .container { padding: 0 40px;}
 }
 
 
 @media screen and (max-width: 768px){
+    .half-width { width: auto;}
+    #card-pad-left { padding: 0; }
+    #card-pad-right { padding: 0; }
+    .card { padding: 0 0 30px 0 !important;}
 
 }
 
@@ -208,7 +417,29 @@ footer div { display: inline-block;}
 }
 
 @media screen and (max-width: 480px){
-
+    .container { padding: 0 20px;}
+    .contents { margin: 0;}
+    .intro { margin: 3.5em 0;}
+    .more-cta {
+        margin: 20px auto;
+        text-align: center;
+        padding: 0px;
+        display: block;
+    }
+    .more-cta i { padding-left: 0 !important;}
+    .more-cta:hover > i { 
+        padding: 0 !important;
+    }
+    .nav {
+        margin: 44px 0;
+    }
+    .nav #resume-icon { 
+        display: unset;
+        vertical-align: baseline;
+        font-size: 0.8em;
+    }
+    .nav #resume-txt { display: none;}
+    #project-1, #project-2 { padding: 0.5em;}
 }
 
 @media screen and (max-width: 360px){
@@ -217,15 +448,14 @@ footer div { display: inline-block;}
 @media screen and (max-width: 320px){
 }
 
+/* end Queries */
 
 
 
 
-
-/*--------
-404 page
---------*/
-
+/* -----------------------------------------
+404 Page ----------------------------------- 
+-------------------------------------------- */
 .error-page {
     font-family: 'Karla', sans-serif;
 }
