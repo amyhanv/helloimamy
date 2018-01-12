@@ -9,6 +9,9 @@ To-do still:
 - [ ] add Projects page
 - [ ] add individual pages for each project
 - [ ] create and add logo
+- [ ] more projects
+- [ ] update resume
+- [ ] update/create CV
 - [ ] :fire:
 
 
