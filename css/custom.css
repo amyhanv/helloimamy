@@ -20,15 +20,15 @@
     0%    { opacity: 0; transform: translate(0px, 20px);}
 }
 
-/* end Animations */ 
+/* end Animations */
 
 
 
-/* Typeface ----------------------------------- */ 
+/* Typeface ----------------------------------- */
 @font-face {
   font-family: 'Brandon';
   font-weight: 700;
-  src: url("../fonts/Brandon_bld.otf") format('opentype'); 
+  src: url("../fonts/Brandon_bld.otf") format('opentype');
 
 }
 @font-face {
@@ -38,12 +38,12 @@
 }
 .circular { font-family: 'circular',sans-serif !important;}
 
-/* end Typeface */ 
+/* end Typeface */
 
 
 /* General/Globals ----------------------------------- */
 
-body, 
+body,
 html  {
     margin:0;
     padding: 0;
@@ -58,7 +58,7 @@ body {
 
 a {}
 
-a, 
+a,
 a .fa {
     text-decoration: none;
      font-size: 1.125em !important;
@@ -69,8 +69,8 @@ a .fa {
     -webkit-transition:.5s;
     transition: 0.5s;
 }
-a:hover, a .fa:hover { 
-    color: red !important; 
+a:hover, a .fa:hover {
+    color: red !important;
     text-decoration: none !important;
 }
 
@@ -115,15 +115,15 @@ a:hover, a .fa:hover {
     -webkit-animation: fadeup 1.5s;
     -moz-animation: fadeup 1.5s;
 }
-/* end General */ 
+/* end General */
 
 
 
 
 /* Buttons ----------------------------------- */
-.shadow-cta { 
+.shadow-cta {
     /*get in touch button*/
-    
+
     /* page load animation */
     animation: fadeup 1.6s;
     -webkit-animation: fadeup 1.6s;
@@ -155,7 +155,7 @@ a:hover, a .fa:hover {
 .more-cta i {
     transition: padding .3s ease;
 }
-.more-cta:hover > i{ 
+.more-cta:hover > i{
    padding-left: 3.5em;
 }
 .more-cta i { padding-left: 1.5em;}
@@ -177,7 +177,7 @@ a:hover, a .fa:hover {
     margin: 55px 0;
 }
 
-.nav span { 
+.nav span {
     display: inline-block;
     /*color: blue;*/
     /*font-style: italic;*/
@@ -199,7 +199,7 @@ a:hover, a .fa:hover {
     /*border-bottom: 2px solid pink;*/
 }
 
-.nav #amy { 
+.nav #amy {
     /*ont-family: 'Brandon';*/
     /*font-weight: 800;*/
     /*color: #355dff;*/
@@ -225,12 +225,12 @@ a:hover, a .fa:hover {
     padding-bottom: 10px;
 }
 
-.icon { 
+.icon {
     width: 20px;
     margin-bottom: 20px;
 }
 
-.bio { 
+.bio {
     /*margin-top: 10em;*/
 }
 
@@ -247,10 +247,10 @@ a:hover, a .fa:hover {
     width: 730px;
 }
 
-.em-wave { 
+.em-wave {
     -webkit-animation-name: wave;
     -webkit-transform-origin:50% 50%;
-    -webkit-animation-duration: 1.2s; 
+    -webkit-animation-duration: 1.2s;
        -moz-animation-duration: 1.2s;
          -o-animation-duration: 1.2s;
             animation-duration: 1.2s;
@@ -258,10 +258,10 @@ a:hover, a .fa:hover {
     -webkit-animation-timing-function: linear;
 }
 .em-wave:hover {
-    
+
     -webkit-animation-name: wave;
     -webkit-transform-origin:50% 50%;
-    -webkit-animation-duration: 0.5s; 
+    -webkit-animation-duration: 0.5s;
        -moz-animation-duration: 0.5s;
          -o-animation-duration: 0.5s;
             animation-duration: 0.5s;
@@ -270,17 +270,17 @@ a:hover, a .fa:hover {
 }
 
 @-webkit-keyframes wave {
-    0% { 
-        -ms-transform: rotate(24deg); 
-        -webkit-transform: rotate(24deg); 
+    0% {
+        -ms-transform: rotate(24deg);
+        -webkit-transform: rotate(24deg);
         transform: rotate(24deg);
     }
     50% {
-        -ms-transform: rotate(-1deg); 
-        -webkit-transform: rotate(-1deg); 
+        -ms-transform: rotate(-1deg);
+        -webkit-transform: rotate(-1deg);
         transform: rotate(-1deg);
     }
-    100% { 
+    100% {
         -ms-transform: rotate(24deg); /* IE 9 */
         -webkit-transform: rotate(24deg); /* Chrome, Safari, Opera */
         transform: rotate(24deg);
@@ -301,7 +301,7 @@ a:hover, a .fa:hover {
 
 }
 
-.card  { 
+.card  {
     box-sizing: border-box;
     float: left;
 }
@@ -309,13 +309,13 @@ a:hover, a .fa:hover {
 #card-pad-right { padding-right: 5px; }
 #card-pad-left { padding-left: 5px; }
 #project-1 {
-    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.38);
+    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.2);
     height: auto;
     padding: 0.8em;
     background-color: #fff;
     /*padding-left: 0;*/
 
-    
+
 }
 
 #project-1 > img:hover{
@@ -333,7 +333,7 @@ a:hover, a .fa:hover {
 
 #project-2 {
     background-color: #fff;
-    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.38);
+    box-shadow: 3px 9px 35px rgba(0, 0, 0, 0.2);
     height: auto;
     padding: 0.8em;
 }
@@ -341,7 +341,7 @@ a:hover, a .fa:hover {
 
 
 .projects #projects-cta {
-    
+
     width: 100%;
     /*padding: 20px 0;*/
     margin-top: 60px;
@@ -363,9 +363,11 @@ a:hover, a .fa:hover {
 
 /* Footer ----------------------------------- */
 footer {
-    
+
     width: 100%;
-    margin: 100px 0;
+    margin: 100px 0 80px 0;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
 }
 footer div { display: inline-block;}
 
@@ -381,7 +383,7 @@ footer div { display: inline-block;}
 
 /* Queries ----------------------------------- */
 @media screen and (max-width: 1024px){
-    .my-h1 { 
+    .my-h1 {
         font-size: 2em;
         line-height: normal;
         letter-spacing: 0.5px;
@@ -408,7 +410,7 @@ footer div { display: inline-block;}
         text-align: center;
         /*border-bottom: 1px solid #000;*/
     }
-    .social-medias { 
+    .social-medias {
         float: none;
         text-align: center;
         display: block;
@@ -427,13 +429,13 @@ footer div { display: inline-block;}
         display: block;
     }
     .more-cta i { padding-left: 0 !important;}
-    .more-cta:hover > i { 
+    .more-cta:hover > i {
         padding: 0 !important;
     }
     .nav {
         margin: 44px 0;
     }
-    .nav #resume-icon { 
+    .nav #resume-icon {
         display: unset;
         vertical-align: baseline;
         font-size: 0.8em;
@@ -454,7 +456,7 @@ footer div { display: inline-block;}
 
 
 /* -----------------------------------------
-404 Page ----------------------------------- 
+404 Page -----------------------------------
 -------------------------------------------- */
 .error-page {
     font-family: 'Karla', sans-serif;
@@ -483,5 +485,3 @@ footer div { display: inline-block;}
 .error-page #back:hover {
     border-bottom: 1px solid #2900ff;
 }
-
-
