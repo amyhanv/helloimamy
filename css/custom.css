@@ -479,9 +479,9 @@ footer div { display: inline-block;}
 }
 
 .error-page #back {
-    border-bottom: 1px solid #999;
-    padding-bottom: 5px;
+    /* border-bottom: 1px solid #999;
+    padding-bottom: 5px; */
 }
 .error-page #back:hover {
-    border-bottom: 1px solid #2900ff;
+
 }
