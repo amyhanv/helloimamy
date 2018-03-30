@@ -143,9 +143,9 @@ p {
 }
 
 .hr-divider {
-    width: 20px;
+    width: 40px;
     color: #cdcdcd;
-    border-top: 4px solid;
+    border-top: 5px dashed;
     margin: 2em auto 6em auto !important;
 }
 
@@ -375,9 +375,14 @@ p {
 
 
 .projects #cta-container {
-    /*margin-top: 3em;*/
+    margin-top: 3em;
     /*clear: both !important;*/
     text-align: center;
+
+}
+.projects #cta-container a{
+
+    font-weight: 700;
 }
 /* end Projects */
 
