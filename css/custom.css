@@ -240,11 +240,6 @@ p {
     margin: 6em 0;
 }
 
-.underline-link {
-    color: #2900ff;
-    border-bottom: 2px solid #2900ff;
-    padding-bottom: 10px;
-}
 
 .icon {
     width: 20px;
@@ -367,10 +362,6 @@ p {
     margin-top: 60px;
     font-size: 1.125em;
 
-    /*border: none;*/
-    /*color: blue;*/
-    /*border: 1px solid blue;*/
-    /*box-shadow: 4px 8px 27px rgba(0, 0, 0, 0.38);*/
 }
 
 
