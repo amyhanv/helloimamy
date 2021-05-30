@@ -27,21 +27,12 @@
 /* end Animations */
 
 /* Typeface ----------------------------------- */
-@font-face {
-  font-family: "Brandon";
-  font-weight: 700;
-  src: url("../fonts/Brandon_bld.otf") format("opentype");
-}
-@font-face {
-  font-family: "Brandon";
-  font-weight: 500;
-  src: url("../fonts/Brandon_med.otf") format("opentype");
-}
 
 @font-face {
   font-family: "Lazer84";
   src: url("../fonts/Lazer84.ttf") format("truetype");
 }
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Source+Sans+Pro&display=swap");
 /* end Typeface */
 
 /* General/Globals ----------------------------------- */
@@ -82,32 +73,33 @@ a .fa:hover {
 
 .container {
   padding: 0 60px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .helloimamy {
-  font-family: "Overpass Mono", monospace;
+  font-family: "Source Sans Pro";
 }
 
 .my-h1 {
-  font-size: 3em;
   width: 730px;
   display: block;
   margin: 0.5em auto;
-  font-family: "Brandon";
   letter-spacing: 1px;
   padding: 0;
   line-height: 1.4;
   font-weight: 500;
   color: #000;
   text-align: left;
+  font-family: "Noto Sans";
 }
 
 .my-h2 {
-  font-size: 1em;
-  font-family: "Roboto Mono";
+  font-family: "Noto Sans";
   /* font-family: 'Brandon'; */
   line-height: 1.4;
-  margin: 3em 0 1em 0;
-  font-weight: 500;
   color: #000;
 }
 
@@ -121,28 +113,11 @@ a .fa:hover {
 
 .contents {
   width: 750px;
-  display: block;
-  margin: 0 auto;
+  margin-top: 50px;
 
   animation: fadeup 1.5s;
   -webkit-animation: fadeup 1.5s;
   -moz-animation: fadeup 1.5s;
-}
-
-p {
-  display: block;
-  margin: 0 auto;
-  font-size: 1em;
-  letter-spacing: 0;
-  line-height: 1.8;
-  font-weight: 300;
-}
-
-.hr-divider {
-  width: 40px;
-  color: #cdcdcd;
-  border-top: 5px dashed;
-  margin: 2em auto 6em auto !important;
 }
 
 /* end General */
@@ -210,9 +185,10 @@ p {
   color: #cdcdcd;
   transform: rotate(-90deg);
   letter-spacing: 1px;
-  /* text-transform: uppercase; */
+  font-style: italic;
   line-height: 1.8;
 }
+
 #side-name a {
   color: #cdcdcd !important;
 }
@@ -227,27 +203,16 @@ p {
 /* end Nav */
 
 /* Intro (hero) ----------------------------------- */
-.intro {
-  margin: 6em 0;
-}
 
 .icon {
   width: 20px;
   margin-bottom: 20px;
 }
 
-.bio {
-  /*margin-top: 10em;*/
-}
-
-.bio h2 {
-  font-family: "Varela";
-  font-weight: 700;
-}
 .bio p {
-  display: block;
-  margin: 0 auto;
-  width: 730px;
+  font-size: 16px;
+  margin-top: 20px;
+  line-height: 1.6;
 }
 
 .em-wave {
@@ -292,9 +257,14 @@ p {
 /* end Intro */
 
 /* Projects ----------------------------------- */
+
+.projects-intro {
+  margin-bottom: 80px;
+}
+
 .projects {
   margin: 6em auto;
-  /* width: 750px; */
+  width: 750px;
   display: block;
 
   /* page load animation */
@@ -307,7 +277,7 @@ p {
   padding: 1em 0 10em 0;
 }
 
-.projects img {
+.projects .project img {
   /* -webkit-filter: grayscale(100%);
    filter: grayscale(100%); */
 }
@@ -329,6 +299,10 @@ p {
   transition: box-shadow 0.8s ease-out;
 }
 
+.project-info p {
+  width: 500px;
+}
+
 .projects img {
   width: 100%;
   /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -347,14 +321,6 @@ p {
   font-size: 1.125em;
 }
 
-.projects #cta-container {
-  margin-top: 3em;
-  /*clear: both !important;*/
-  text-align: center;
-}
-.projects #cta-container a {
-  font-weight: 700;
-}
 /* end Projects */
 
 /* Footer ----------------------------------- */
@@ -369,11 +335,24 @@ footer div {
   line-height: 2;
 }
 
-.social-medias {
-  float: right;
+.contact {
+  display: flex;
+  flex-direction: column;
 }
-.social-medias a {
-  padding: 0 0.89em;
+
+.work {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-github-alt {
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.underlined {
+  text-decoration: underline;
 }
 
 /* end Footer */
@@ -389,7 +368,8 @@ footer div {
   .bio p {
     width: auto;
   }
-  .contents {
+  .contents,
+  .projects {
     width: auto;
   }
   #sidebar {
@@ -397,8 +377,10 @@ footer div {
   }
 }
 @media screen and (max-width: 992px) {
-  .contents {
+  .contents,
+  .projects {
     margin: 15px !important;
+    width: auto;
   }
   .container {
     padding: 0 40px;
@@ -416,15 +398,13 @@ footer div {
 
 @media screen and (max-width: 640px) {
   footer div {
-    display: block;
-    text-align: center;
-    /*border-bottom: 1px solid #000;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .social-medias {
-    float: none;
-    text-align: center;
-    display: block;
-    margin-top: 30px;
+
+  .work {
+    float: unset;
   }
 }
 
@@ -435,7 +415,8 @@ footer div {
   .container {
     padding: 0 2em;
   }
-  .contents {
+  .contents,
+  .projects {
     margin: 0;
   }
   .intro {
