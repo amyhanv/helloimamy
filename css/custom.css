@@ -32,7 +32,6 @@
   font-family: "Lazer84";
   src: url("../fonts/Lazer84.ttf") format("truetype");
 }
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Source+Sans+Pro&display=swap");
 /* end Typeface */
 
 /* General/Globals ----------------------------------- */
@@ -80,7 +79,7 @@ a .fa:hover {
   justify-content: center;
 }
 .helloimamy {
-  font-family: "Source Sans Pro";
+  font-family: sans-serif;
 }
 
 .my-h1 {
@@ -93,14 +92,15 @@ a .fa:hover {
   font-weight: 500;
   color: #000;
   text-align: left;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
 }
 
 .my-h2 {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
   /* font-family: 'Brandon'; */
   line-height: 1.4;
   color: #000;
+  font-weight: 500;
 }
 
 .row-auto {
@@ -193,11 +193,16 @@ a .fa:hover {
   color: #cdcdcd !important;
 }
 
-#initials {
+#initials,
+#initials a {
   text-align: center;
-  color: #cdcdcd;
+  color: #cdcdcd !important;
   margin-top: 5em !important;
   font-family: "Lazer84";
+}
+
+#initials a:hover {
+  text-decoration: none !important;
 }
 
 /* end Nav */
@@ -416,8 +421,9 @@ footer div {
     padding: 0 2em;
   }
   .contents,
-  .projects {
-    margin: 0;
+  .projects,
+  .project-info p {
+    width: 100%;
   }
   .intro {
     margin: 3.5em 0;
