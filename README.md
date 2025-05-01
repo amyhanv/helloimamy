@@ -1,7 +1,7 @@
-# Hello, I'm Amy. :information_desk_person:
+# amy's website
 
 ### Check it out [here](http://helloimamy.com)!
 
-This is my personal website that includes links to my contact/social media information as well as projects I've worked on! 
+Framework: Tailwind CSS + Alpine.js + AOS for scroll animations
 
 

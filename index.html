@@ -1,85 +1,99 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Amy Hanvoravongchai</title>
+<html lang="en" class="scroll-smooth scroll-pt-24">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amy Hanvoravongchai</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS & AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Special Gothic Expanded One"','sans-serif'],
+            body: ['"Hubot Sans"','sans-serif'],
+          },
+          colors: {
+            primary: '#000000',
+            accent: '#FF3800'
+          }
+        }
+      }
+    }
+  </script>
 
-    <!--CSS-->
-    <link href="css/custom.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-primary font-body overflow-x-hidden">
+  <!-- Top Nav -->
+  <header class="fixed top-0 left-0 w-full px-4 py-2 flex justify-between items-center z-10 bg-white" data-aos="fade-down">
+    <a href="#" class="font-heading text-2xl lowercase">amy hanvoravongchai</a>
+    <nav class="space-x-8 uppercase text-sm tracking-widest font-heading">
+      <a href="#contact" class="hover:text-accent">contact</a>
+      <a href="#" id="randomize" class="hover:text-accent hidden md:inline-block">random</a>
+    </nav>
+  </header>
 
-    <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-
-    <!-- Emoji CSS -->
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
-    <!-- Font Awesome -->
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
-      integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="helloimamy">
-      <div id="sidebar">
-        <h4 id="side-name" class="text-center">
-          Amy Hanvoravongchai
-        </h4>
-      </div>
-      <div class="container">
-        <header class="nav"><h4 id="initials">AH</h4></header>
-    
-        <div class="contents">
-          <div class="intro">
-            <h2 class="my-h2">
-              Hello I'm Amy - Product manager and developer
-            </h2>
-            <div class="bio">
-              <p>
-                <b>A bit about me:</b> I'm based out of Vancouver Island, BC. Passionate about seamless user experience and data-driven designs, I am seeking to leverage my software development background to inspire collaboration between teams through a combined understanding in engineering, product, and design.
-              </p>
-              <p>
-                On weekends, you'll spot me at a
-                local coffee shop reading/writing, tinkering on my guitar, crafting handmade cards, or outside frisbeeing on one
-                of the many beaches here on Vancouver Island.
-                <i class="em em-wave"></i>
-              </p>
-            </div>
-          </div>
-          <!-- end intro -->
-
-          <footer>
-            <div>
-              <div class="contact">
-                <span>
-                  <!-- <a href="files/AmyHanvoravongchai.pdf"
-                    >→ View my <strong>resume</strong> </a
-                  ><i class="em em-man_dancing"></i> -->
-                </span>
-                <a href="mailto:amy.hanv@gmail.com"
-                  >→ Email <span class="underlined">amy.hanv@gmail.com</span></a
-                >
-              </div>
-            </div>
-            <div class="work">
-              <a href="https://www.linkedin.com/in/amyhanv/">
-                → My LinkedIn <i class="fab fa-linkedin-in"></i>
-              </a>
-              <!-- <a href="https://github.com/amyhanv">
-                → My GitHub <i class="fab fa-github-alt fa-lg"></i>
-              </a> -->
-            </div>
-          </footer>
+  <!-- Hero Section -->
+  <section class="flex items-center px-8" data-aos="fade-up" data-aos-delay="100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="relative flex flex-col justify-center h-screen" >
+        <!-- Large Heading -->
+        <h1 class="font-heading text-[clamp(4rem,12vw,12rem)] leading-none lowercase">
+          hello there 
+        </h1>
+        <!-- Icons -->
+        <div class="flex space-x-4 absolute top-[47%] left-0 transform -translate-y-1/2 hidden md:block" >
+          <span class="text-3xl emoji transition-opacity duration-200 opacity-100">👩🏻‍💻 </span>
+          <span class="text-3xl emoji transition-opacity duration-200 opacity-100">🥂 </span>
+          <span class="text-3xl emoji transition-opacity duration-200 opacity-100">🎨 </span>
         </div>
-        <!-- end contents -->
+        <!-- Illustration -->
+        <div class="w-full overflow-hidden md:absolute md:bottom-[-200px] md:-ml-20 md:w-5/6">
+            <img src="portrait1.png" alt="" />
+        </div>
       </div>
-      <!-- end container /cf -->
+      <!-- About Bio -->
+      <div class="flex flex-col justify-center space-y-8" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-2xl md:text-3xl leading-snug">
+          <strong>builder at heart:</strong> i’m a dev-turned-PM driven to craft user-first experiences, build technology‑powered products, and move swiftly with data-backed decisions. My background in development and analytics fuels a passion for snappy UX and intuitive UI design
+        </p>
+        <p class="text-3xl md:text-4xl leading-tight lowercase text-accent font-heading">
+          _at the intersection of business, technology, and design
+        </p>
+      </div>
     </div>
-    <!-- end helloimamy div -->
+  </section>
 
-  </body>
+  <!-- Contact Section -->
+  <section id="contact" class="min-h-screen flex flex-col items-center justify-center px-8" data-aos="fade-down" data-aos-delay="200">
+    <h2 class="font-heading text-5xl lowercase text-accent mb-8">get in touch</h2>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-12 text-lg font-medium">
+      <a href="mailto:amy.hanv@gmail.com" class="hover:underline">amyhanv@gmail.com</a>
+      <a href="https://www.linkedin.com/in/amyhanv/" target="_blank" rel="noopener" class="hover:underline">linkedin</a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="w-full text-center py-4 text-xs uppercase tracking-widest text-gray-500 font-body">
+    © 2025 amy hanvoravongchai
+  </footer>
+
+  <!-- AOS Initialization -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+
+<script src="./js/main.js" defer></script>
+
+
+</body>
 </html>
