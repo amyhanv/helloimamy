@@ -33,10 +33,10 @@
 </head>
 <body class="bg-white text-primary font-body overflow-x-hidden">
   <!-- Top Nav -->
-  <header class="fixed top-0 left-0 w-full px-4 py-2 flex justify-between items-center z-10 bg-white" data-aos="fade-down">
-    <a href="#" class="font-heading text-2xl lowercase">amy hanvoravongchai</a>
+  <header class="fixed top-0 left-0 w-full px-4 py-1 flex justify-between items-center z-10 bg-white" data-aos="fade-down">
+    <a href="#" class="font-heading md:text-2xl lowercase sm:text-xl">amy hanvoravongchai</a>
     <nav class="space-x-8 uppercase text-sm tracking-widest font-heading">
-      <a href="#contact" class="hover:text-accent">contact</a>
+      <a href="#contact" class="hover:text-accent ">contact</a>
       <a href="#" id="randomize" class="hover:text-accent hidden md:inline-block">random</a>
     </nav>
   </header>
@@ -46,7 +46,7 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
       <div class="relative flex flex-col justify-center h-screen" >
         <!-- Large Heading -->
-        <h1 class="font-heading text-[clamp(4rem,12vw,12rem)] leading-none lowercase">
+        <h1 class="font-heading text-[clamp(4rem,12vw,12rem)] leading-none lowercase ">
           hello there 
         </h1>
         <!-- Icons -->
@@ -56,7 +56,7 @@
           <span class="text-3xl emoji transition-opacity duration-200 opacity-100">🎨 </span>
         </div>
         <!-- Illustration -->
-        <div class="w-full overflow-hidden md:absolute md:bottom-[-200px] md:-ml-20 md:w-5/6">
+        <div class="w-full overflow-hidden md:absolute md:bottom-[-200px] md:-ml-20 md:w-5/6 ">
             <img src="portrait1.png" alt="" />
         </div>
       </div>
@@ -73,11 +73,12 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="min-h-screen flex flex-col items-center justify-center px-8" data-aos="fade-down" data-aos-delay="200">
+  <section id="contact" class="min-h-screen flex flex-col md:items-center justify-center px-8" data-aos="fade-down" data-aos-delay="200">
     <h2 class="font-heading text-5xl lowercase text-accent mb-8">get in touch</h2>
-    <div class="flex flex-row justify-center items-center gap-12 text-lg font-medium">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-start md:gap-9 font-medium">
       <a href="mailto:amy.hanv@gmail.com" class="hover:underline">amyhanv@gmail.com</a>
       <a href="https://www.linkedin.com/in/amyhanv/" target="_blank" rel="noopener" class="hover:underline">linkedin</a>
+      <a href="https://github.com/amyhanv" target="_blank" rel="noopener" class="hover:underline">github</a>
     </div>
   </section>
   
