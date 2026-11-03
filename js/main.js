@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const cur = { x: 50, y: 40, z: 150 };
   const target = { x: 50, y: 40, z: 150 };
+  const vel = { x: 0, y: 0, z: 0 };
 
   window.addEventListener('pointermove', (e) => {
     target.x = (e.clientX / window.innerWidth) * 100;
@@ -33,11 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   const tick = () => {
-    // constant-speed glide (no slow-in/slow-out), capped per frame
-    const step = (a, b, max) => a + Math.max(-max, Math.min(max, b - a));
-    cur.x = step(cur.x, target.x, 0.22);
-    cur.y = step(cur.y, target.y, 0.22);
-    cur.z = step(cur.z, target.z, 0.12);
+    // soft spring: eases in and out, with a little inertia
+    for (const k of ['x', 'y', 'z']) {
+      vel[k] += (target[k] - cur[k]) * 0.0016;
+      vel[k] *= 0.93;
+      cur[k] += vel[k];
+    }
     title.style.setProperty('--mx', cur.x.toFixed(2));
     title.style.setProperty('--my', cur.y.toFixed(2));
     title.style.setProperty('--mz', cur.z.toFixed(2));
