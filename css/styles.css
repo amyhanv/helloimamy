@@ -20,7 +20,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 4rem; -webkit-text-size-adjust: 100%; }
+html { background: var(--paper); scroll-behavior: smooth; scroll-padding-top: 4rem; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: var(--paper);
@@ -38,18 +38,21 @@ ul { list-style: none; }
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 
 /* ── Nav ─────────────────────────────────────── */
+/* no background: white text with `difference` inverts wherever it overlaps content */
 .nav {
   position: fixed; inset: 0 0 auto 0; z-index: 50;
   display: flex; justify-content: space-between; align-items: center;
   padding: 1rem var(--pad);
-  background: rgba(251, 250, 247, .8);
-  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  color: #fff;
+  mix-blend-mode: difference;
+  pointer-events: none;
   font-size: 1rem;
 }
+.nav a { pointer-events: auto; }
 .nav__name { font-weight: 600; letter-spacing: -.02em; }
-.nav__links { display: flex; gap: clamp(1.2rem, 2.4vw, 2.2rem); color: rgba(17,16,16,.5); }
-.nav__links a { transition: color .25s var(--ease); }
-.nav__links a:hover { color: var(--orange); }
+.nav__links { display: flex; gap: clamp(1.2rem, 2.4vw, 2.2rem); }
+.nav__links a { opacity: .7; transition: opacity .25s var(--ease); }
+.nav__links a:hover { opacity: 1; }
 
 /* ── Hero ────────────────────────────────────── */
 .hero {
