@@ -82,8 +82,6 @@ ul { list-style: none; }
 .dot { display: inline-block; width: .16em; height: .16em; border-radius: 50%; background: var(--orange); margin-left: .06em; }
 .hero__intro { max-width: 40rem; animation: fade 1s var(--ease) .4s both; }
 .hero__intro p { font-size: clamp(1.4rem, 2.6vw, 2.2rem); line-height: 1.25; letter-spacing: -.03em; }
-.pills { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
-.pills li { padding: .35rem .9rem; border-radius: 999px; background: #efede7; font-size: .9rem; }
 /* idle drift for touch devices */
 @keyframes lava {
   0%   { background-position: 20% 25%; background-size: 130%; }
@@ -104,7 +102,6 @@ ul { list-style: none; }
   grid-column: 1 / 4;
   font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; padding-top: .8rem;
 }
-.about__label span, .contact__label span { color: var(--orange); font-weight: 600; margin-right: .6rem; }
 .about__body { grid-column: 4 / 13; display: grid; gap: clamp(2rem, 4vw, 3.5rem); }
 .about__lead {
   font-size: clamp(1.8rem, 4.4vw, 4.4rem);
