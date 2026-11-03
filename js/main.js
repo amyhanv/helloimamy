@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Cursor-driven "lava lamp": the illustration inside the hero letters
 // follows the pointer, eased so it glides rather than snaps.
 (() => {
-  const title = document.querySelector('.hero__title');
+  const title = document.querySelector('.hero');
   if (!title) return;
   if (!window.matchMedia('(hover: hover)').matches) return;            // touch: CSS drift instead
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

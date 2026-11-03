@@ -53,6 +53,7 @@ ul { list-style: none; }
 
 /* ── Hero ────────────────────────────────────── */
 .hero {
+  --mx: 50; --my: 40; --mz: 150;
   display: flex; flex-direction: column; gap: 2rem;
   padding: clamp(8rem, 16vw, 12rem) var(--pad) clamp(3rem, 7vw, 6rem);
   max-width: 78rem;
@@ -65,7 +66,6 @@ ul { list-style: none; }
   font-weight: 600;
   padding-right: .05em;
   /* illustration cut out through the letters */
-  --mx: 50; --my: 40; --mz: 150;
   background: url("../portrait.jpg") calc(var(--mx) * 1%) calc(var(--my) * 1%) / calc(var(--mz) * 1%) no-repeat;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
@@ -79,10 +79,15 @@ ul { list-style: none; }
 .dot { display: inline-block; width: .16em; height: .16em; border-radius: 50%; background: var(--orange); margin-left: .06em; }
 .hero__intro { max-width: 40rem; animation: fade 1s var(--ease) .4s both; }
 .hero__intro p { font-size: clamp(1.4rem, 2.6vw, 2.2rem); line-height: 1.25; letter-spacing: -.03em; }
-.chip { display: inline-block; width: 1.5em; height: .8em; vertical-align: -.05em; margin: 0 .1em; background: var(--orange); }
-.chip--circle { border-radius: 999px; }
-.chip--square { border-radius: .2em; background: var(--ink); }
-.chip--tri { border-radius: 999px 999px 0 0; }
+.chip {
+  display: inline-block; width: 3.2em; height: 1.35em; vertical-align: -.28em; margin: 0 .1em;
+  background-image: url("../portrait.jpg"); background-repeat: no-repeat;
+  background-size: 320%;
+}
+/* little windows onto the artwork — each one tracks the cursor a different way */
+.chip--circle { border-radius: 999px; background-position: calc(var(--mx) * 1%) calc(var(--my) * 1%); }
+.chip--square { border-radius: .22em; width: 1.6em; height: 1.6em; vertical-align: -.4em; background-position: calc((100 - var(--mx)) * 1%) calc(var(--my) * 1%); }
+.chip--tri { border-radius: 999px 999px 0 0; height: 1.5em; width: 2.6em; vertical-align: -.3em; background-position: calc(var(--my) * 1%) calc((100 - var(--mx)) * 1%); }
 .pills { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
 .pills li { padding: .35rem .9rem; border-radius: 999px; background: #efede7; font-size: .9rem; }
 /* idle drift for touch devices */
