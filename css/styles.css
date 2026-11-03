@@ -79,15 +79,25 @@ ul { list-style: none; }
 .hero__title .line:nth-child(2) { padding-left: .9em; }
 .hero__title .line:nth-child(2) > span { font-weight: 200; font-style: italic; letter-spacing: -.06em; animation-delay: .12s; }
 .dot { display: inline-block; width: .16em; height: .16em; border-radius: 50%; background: currentColor; margin-left: .06em; }
-.hero__tag {
-  max-width: 26rem; margin-left: auto;
-  padding-top: .9rem; border-top: var(--line);
-  font-size: clamp(1.05rem, 1.5vw, 1.35rem); letter-spacing: -.01em;
+.hero__intro {
+  max-width: 34rem; margin-left: auto;
+  padding-top: 1rem; border-top: var(--line);
   animation: fade 1s var(--ease) .6s both;
+}
+.hero__intro p { font-size: clamp(1.25rem, 2vw, 1.8rem); line-height: 1.35; letter-spacing: -.02em; }
+.chip { display: inline-block; width: 1.5em; height: .9em; vertical-align: -.08em; margin: 0 .15em; background: var(--ink); }
+.chip--circle { border-radius: 999px; background: var(--paper); }
+.chip--square { border-radius: .2em; background: var(--yellow); }
+.chip--tri { border-radius: 999px 999px 0 0; background: var(--ink); }
+.pills { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.pills li {
+  padding: .3rem .85rem; border-radius: 999px;
+  background: rgba(243, 239, 230, .85);
+  font-size: .85rem; letter-spacing: -.005em;
 }
 @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
 @keyframes fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@media (max-width: 640px) { .hero__tag { margin-left: 0; max-width: none; } }
+@media (max-width: 640px) { .hero__intro { margin-left: 0; max-width: none; } }
 
 /* ── About ───────────────────────────────────── */
 .about {
