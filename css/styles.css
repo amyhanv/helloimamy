@@ -89,6 +89,10 @@ ul { list-style: none; }
   transition: transform .5s var(--ease);
 }
 .card:hover .card__visual { transform: translateY(-4px); }
+.card { display: block; }
+.card__desc { margin-top: .35rem; max-width: 30rem; color: rgba(17,16,16,.6); font-size: 1rem; line-height: 1.4; }
+.tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .9rem; }
+.tags li { padding: .25rem .8rem; border: 1px solid rgba(17,16,16,.18); border-radius: 999px; font-size: .85rem; color: rgba(17,16,16,.7); }
 .card__title { margin-top: .9rem; font-size: 1.2rem; font-weight: 600; letter-spacing: -.02em; }
 @media (max-width: 760px) { .projects__grid { grid-template-columns: 1fr; } }
 
