@@ -19,7 +19,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { background: var(--paper); scroll-behavior: smooth; scroll-padding-top: 4rem; -webkit-text-size-adjust: 100%; }
+html { background: var(--paper); scroll-padding-top: 4rem; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: var(--paper);
@@ -35,6 +35,11 @@ h1, h2, p, ul, figure { margin: 0; padding: 0; }
 ul { list-style: none; }
 ::selection { background: var(--orange); color: #fff; }
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+
+/* Lenis smooth-scroll plumbing */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
 
 /* ── Nav ─────────────────────────────────────── */
 /* no background: white text with `difference` inverts wherever it overlaps content */
@@ -128,9 +133,10 @@ ul { list-style: none; }
   margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 .contact__art {
+  will-change: filter, scale;
   grid-column: 9 / 13; grid-row: 1 / 3; align-self: end;
   aspect-ratio: 1; border-radius: 1.5rem;
-  background: url("../portrait.jpg") center / cover;
+  background: url("../portrait.jpg") 50% calc(var(--py, 50) * 1%) / auto 135% no-repeat;
   margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 .contact__links { grid-column: 1 / 13; display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
