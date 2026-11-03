@@ -65,7 +65,7 @@ ul { list-style: none; }
   font-weight: 600;
   padding-right: .05em;
   /* illustration cut out through the letters */
-  --mx: 50; --my: 40; --mz: 210;
+  --mx: 50; --my: 40; --mz: 150;
   background: url("../portrait.jpg") calc(var(--mx) * 1%) calc(var(--my) * 1%) / calc(var(--mz) * 1%) no-repeat;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
@@ -87,11 +87,11 @@ ul { list-style: none; }
 .pills li { padding: .35rem .9rem; border-radius: 999px; background: #efede7; font-size: .9rem; }
 /* idle drift for touch devices */
 @keyframes lava {
-  0%   { background-position: 20% 25%; background-size: 180%; }
-  25%  { background-position: 75% 15%; background-size: 220%; }
-  50%  { background-position: 85% 70%; background-size: 190%; }
-  75%  { background-position: 30% 85%; background-size: 240%; }
-  100% { background-position: 55% 40%; background-size: 200%; }
+  0%   { background-position: 20% 25%; background-size: 130%; }
+  25%  { background-position: 75% 15%; background-size: 160%; }
+  50%  { background-position: 85% 70%; background-size: 140%; }
+  75%  { background-position: 30% 85%; background-size: 170%; }
+  100% { background-position: 55% 40%; background-size: 150%; }
 }
 @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
 @keyframes fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
