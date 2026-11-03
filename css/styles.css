@@ -65,10 +65,15 @@ ul { list-style: none; }
   font-weight: 600;
   padding-right: .05em;
   /* illustration cut out through the letters */
-  background: url("../portrait.jpg") 50% 40% / 180% no-repeat;
+  --mx: 50; --my: 40; --mz: 210;
+  background: url("../portrait.jpg") calc(var(--mx) * 1%) calc(var(--my) * 1%) / calc(var(--mz) * 1%) no-repeat;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
-  animation: fade 1s var(--ease) both, lava 32s ease-in-out infinite alternate;
+  animation: fade 1s var(--ease) both;
+}
+/* touch devices have no cursor: let the art drift on its own */
+@media (hover: none) {
+  .hero__title { animation: fade 1s var(--ease) both, lava 32s ease-in-out infinite alternate; }
 }
 .hero__title .line { display: block; }
 .dot { display: inline-block; width: .16em; height: .16em; border-radius: 50%; background: var(--orange); margin-left: .06em; }
@@ -80,7 +85,7 @@ ul { list-style: none; }
 .chip--tri { border-radius: 999px 999px 0 0; }
 .pills { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
 .pills li { padding: .35rem .9rem; border-radius: 999px; background: #efede7; font-size: .9rem; }
-/* slow, lava-lamp drift of the illustration inside the letters */
+/* idle drift for touch devices */
 @keyframes lava {
   0%   { background-position: 20% 25%; background-size: 180%; }
   25%  { background-position: 75% 15%; background-size: 220%; }
