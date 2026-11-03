@@ -58,14 +58,19 @@ ul { list-style: none; }
   max-width: 78rem;
 }
 .hero__title {
-  font-size: clamp(4rem, 12.5vw, 11rem);
-  line-height: .9;
-  letter-spacing: -.055em;
+  align-self: flex-start;
+  font-size: clamp(5rem, 21vw, 19rem);
+  line-height: .86;
+  letter-spacing: -.06em;
   font-weight: 600;
+  padding-right: .05em;
+  /* illustration cut out through the letters */
+  background: url("../portrait.jpg") 50% 40% / cover no-repeat;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  animation: fade 1s var(--ease) both;
 }
-.hero__title .line { display: inline-block; overflow: hidden; padding: .08em .05em .06em 0; margin-top: -.08em; }
-.hero__title .line > span { display: inline-block; animation: rise 1s var(--ease) both; }
-.hero__title .line:nth-child(2) > span { font-weight: 200; font-style: italic; letter-spacing: -.06em; color: var(--orange); animation-delay: .1s; }
+.hero__title .line { display: block; }
 .dot { display: inline-block; width: .16em; height: .16em; border-radius: 50%; background: var(--orange); margin-left: .06em; }
 .hero__intro { max-width: 40rem; animation: fade 1s var(--ease) .4s both; }
 .hero__intro p { font-size: clamp(1.4rem, 2.6vw, 2.2rem); line-height: 1.25; letter-spacing: -.03em; }
