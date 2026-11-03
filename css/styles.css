@@ -117,15 +117,9 @@ ul { list-style: none; }
   padding-top: 1.2rem; border-top: var(--line);
   font-size: clamp(1rem, 1.25vw, 1.2rem); line-height: 1.4;
 }
-.about__art {
-  grid-column: 4 / 9; aspect-ratio: 1;
-  background: url("../portrait.jpg") center / cover;
-  border-radius: 50%;
-}
 @media (max-width: 860px) {
-  .about__label, .about__body, .about__art { grid-column: 1 / 13; }
+  .about__label, .about__body { grid-column: 1 / 13; }
   .about__cols { grid-template-columns: 1fr; }
-  .about__art { grid-column: 1 / 11; }
 }
 
 /* ── Contact ─────────────────────────────────── */
@@ -139,6 +133,12 @@ ul { list-style: none; }
   font-size: clamp(4rem, 14vw, 13rem); line-height: .85; letter-spacing: -.055em; font-weight: 600;
   margin-bottom: clamp(2rem, 5vw, 4rem);
 }
+.contact__art {
+  grid-column: 9 / 13; grid-row: 1 / 3; align-self: end;
+  aspect-ratio: 1; border-radius: 50%;
+  background: url("../portrait.jpg") center / cover;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
 .contact__list { grid-column: 1 / 13; border-top: var(--line); }
 .contact__list a {
   display: grid; grid-template-columns: 8rem 1fr auto; align-items: baseline; gap: 1rem;
@@ -150,6 +150,9 @@ ul { list-style: none; }
 .contact__list em { font-style: normal; font-size: clamp(1.4rem, 3.2vw, 3rem); transition: transform .45s var(--ease); }
 .contact__list a:hover { color: var(--orange); padding-left: .8rem; }
 .contact__list a:hover em { transform: rotate(45deg); }
+@media (max-width: 860px) {
+  .contact__art { grid-column: 7 / 13; grid-row: 1; }
+}
 @media (max-width: 640px) {
   .contact__list a { grid-template-columns: 1fr auto; }
   .contact__list span { grid-column: 1 / 3; }
