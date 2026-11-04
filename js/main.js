@@ -56,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const art = document.getElementById('drag-art');
   if (!art) return;
 
+  // desktop only: needs a wide screen and a real pointer (no touch dragging)
+  const desktop = window.matchMedia('(min-width: 761px) and (pointer: fine)');
+
   let left = 0, top = 0;                  // position in page coordinates (once detached)
   let cx = 0, cy = 0, gx = 0, gy = 0;     // pointer (viewport) + grab offset
   let lastX = 0, tilt = 0, dragging = false, detached = false, raf = 0;
@@ -94,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   art.addEventListener('pointerdown', (e) => {
+    if (!desktop.matches) return;          // phones/tablets: leave the image alone
     detach();
     dragging = true;
     art.setPointerCapture(e.pointerId);
@@ -121,6 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   art.addEventListener('pointerup', end);
   art.addEventListener('pointercancel', end);
+
+  // if the window becomes phone-sized after a drag, put the image back in its place
+  const reattach = () => {
+    if (desktop.matches || !detached) return;
+    const slot = document.querySelector('.contact__art-slot');
+    ['position', 'left', 'top', 'width', 'height', 'maxWidth', 'minHeight', 'margin', 'rotate'].forEach((p) => { art.style[p] = ''; });
+    if (slot) { slot.parentNode.insertBefore(art, slot); slot.remove(); }
+    detached = false;
+  };
+  desktop.addEventListener?.('change', reattach);
 
   // keep it on the page if the page gets smaller (e.g. projects collapse, window resize)
   const keepOnPage = () => {
