@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amy Hanvoravongchai</title>
+  <meta name="robots" content="noai, noimageai" />
   <meta name="description" content="Amy Hanvoravongchai — technical PM at the intersection of business, technology, and design." />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="preload" href="fonts/ppmori-semibold.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="fonts/dmmono-regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -58,17 +60,20 @@
       <h2 class="contact__title reveal">get in touch</h2>
       <figure class="contact__art reveal" role="img" aria-label="Illustration by Amy: a figure with long purple hair resting beside two large roses"></figure>
       <div class="contact__info">
-        <a class="pill" href="mailto:amy.hanv@gmail.com"><b>amy.hanv@gmail.com</b> <span aria-hidden="true">↗</span></a>
+        <div class="pill pill--email">
+          <a class="pill__link" id="email-link" href="#contact" rel="nofollow"><b>email me</b> <span aria-hidden="true">↗</span></a>
+          <button type="button" class="copy" id="copy-email" aria-label="Copy email address">copy</button>
+        </div>
         <a class="pill" href="https://www.linkedin.com/in/amyhanv/" target="_blank" rel="noopener"><b>linkedin</b> <span aria-hidden="true">↗</span></a>
         <a class="pill" href="https://github.com/amyhanv" target="_blank" rel="noopener"><b>github</b> <span aria-hidden="true">↗</span></a>
       </div>
+      <footer class="foot">
+        <span>Copyright © <span id="year">2026</span> Amy Hanvoravongchai. All rights reserved.</span>
+        <a href="#top">Back to top ↑</a>
+      </footer>
     </section>
   </main>
 
-  <footer class="foot">
-    <span>Copyright © 2025 Amy Hanvoravongchai. All rights reserved.</span>
-    <a href="#top">Back to top ↑</a>
-  </footer>
 
   <script src="./js/main.js" defer></script>
 </body>
