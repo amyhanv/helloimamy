@@ -48,23 +48,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Fun little extra: the illustration in "get in touch" can be dragged anywhere on
-// the page. It tilts with how fast you fling it, and the page scrolls along when
-// you drag near the top or bottom edge of the window.
+// the page. Once moved it is pinned to its spot on the page itself, so layout
+// changes elsewhere (like expanding "projects") don't push it around.
+// It tilts with how fast you fling it, and the page scrolls along when you drag
+// near the top or bottom edge of the window.
 document.addEventListener('DOMContentLoaded', () => {
   const art = document.getElementById('drag-art');
   if (!art) return;
 
-  let x = 0, y = 0;                       // current offset from the art's home position
-  let cx = 0, cy = 0, gx = 0, gy = 0;     // pointer (viewport) + where we grabbed it
-  let bounds = null, lastX = 0, tilt = 0, dragging = false, raf = 0;
+  let left = 0, top = 0;                  // position in page coordinates (once detached)
+  let cx = 0, cy = 0, gx = 0, gy = 0;     // pointer (viewport) + grab offset
+  let lastX = 0, tilt = 0, dragging = false, detached = false, raf = 0;
 
   const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
-  const apply = () => { art.style.translate = `${x}px ${y}px`; };
+  const page = () => ({ w: document.documentElement.clientWidth, h: document.documentElement.scrollHeight });
 
-  const update = () => {
-    x = clamp(cx + scrollX - gx, bounds.minX, bounds.maxX);
-    y = clamp(cy + scrollY - gy, bounds.minY, bounds.maxY);
-    apply();
+  // take the art out of the layout and pin it to the page; leave an empty slot so the section keeps its shape
+  const detach = () => {
+    if (detached) return;
+    const r = art.getBoundingClientRect();
+    const slot = document.createElement('div');
+    slot.className = 'contact__art-slot';
+    art.parentNode.insertBefore(slot, art);
+    left = r.left + scrollX; top = r.top + scrollY;
+    Object.assign(art.style, { position: 'absolute', left: left + 'px', top: top + 'px',
+      width: r.width + 'px', height: r.height + 'px', maxWidth: 'none', minHeight: '0', margin: '0' });
+    document.body.appendChild(art);
+    detached = true;
+  };
+
+  const place = () => {
+    const p = page(), w = art.offsetWidth, h = art.offsetHeight;
+    left = clamp(cx + scrollX - gx, 0, Math.max(0, p.w - w));
+    top = clamp(cy + scrollY - gy, 0, Math.max(0, p.h - h));
+    art.style.left = left + 'px'; art.style.top = top + 'px';
   };
 
   const loop = () => {
@@ -72,21 +89,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const edge = 70, speed = 14;
     if (cy < edge) scrollBy({ top: -speed, behavior: 'instant' });
     else if (cy > innerHeight - edge) scrollBy({ top: speed, behavior: 'instant' });
-    update();
+    place();
     raf = requestAnimationFrame(loop);
   };
 
   art.addEventListener('pointerdown', (e) => {
+    detach();
     dragging = true;
     art.setPointerCapture(e.pointerId);
     art.classList.add('dragging');
     cx = e.clientX; cy = e.clientY; lastX = cx;
-    gx = cx + scrollX - x; gy = cy + scrollY - y;
-    // where the art sits with no offset, in page coordinates → keeps it on the page
-    const r = art.getBoundingClientRect();
-    const homeX = r.left + scrollX - x, homeY = r.top + scrollY - y;
-    const pageW = document.documentElement.clientWidth, pageH = document.documentElement.scrollHeight;
-    bounds = { minX: -homeX, maxX: pageW - r.width - homeX, minY: -homeY, maxY: pageH - r.height - homeY };
+    gx = cx + scrollX - left; gy = cy + scrollY - top;
     e.preventDefault();
     cancelAnimationFrame(raf); raf = requestAnimationFrame(loop);
   });
@@ -109,5 +122,14 @@ document.addEventListener('DOMContentLoaded', () => {
   art.addEventListener('pointerup', end);
   art.addEventListener('pointercancel', end);
 
-  window.addEventListener('resize', () => { x = 0; y = 0; apply(); });
+  // keep it on the page if the page gets smaller (e.g. projects collapse, window resize)
+  const keepOnPage = () => {
+    if (!detached) return;
+    const p = page();
+    left = clamp(left, 0, Math.max(0, p.w - art.offsetWidth));
+    top = clamp(top, 0, Math.max(0, p.h - art.offsetHeight));
+    art.style.left = left + 'px'; art.style.top = top + 'px';
+  };
+  window.addEventListener('resize', keepOnPage);
+  if ('ResizeObserver' in window) new ResizeObserver(keepOnPage).observe(document.body);
 });

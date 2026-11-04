@@ -169,6 +169,10 @@ ul { list-style: none; }
   font-size: clamp(1.9rem, 4.2vw, 3.6rem); line-height: 1.1; letter-spacing: -.04em; font-weight: 600;
 }
 .contact__info { grid-column: 1 / 7; grid-row: 2; align-self: start; margin-top: 1rem; position: relative; z-index: 2; }
+/* placeholder left behind once the illustration has been dragged away */
+.contact__art-slot { grid-column: 10 / 13; grid-row: 1 / 4; align-self: stretch; justify-self: end; width: 100%; max-width: 15rem; min-height: 16rem; visibility: hidden; }
+@media (max-width: 760px) { .contact__art-slot { grid-column: 1 / 13; grid-row: 2; max-width: none; min-height: 0; aspect-ratio: 16 / 10; justify-self: stretch; } }
+
 /* inline text links — underline redraws on hover, arrow nudges */
 .contact__text { max-width: 30rem; font-size: clamp(1.1rem, 1.7vw, 1.4rem); line-height: 1.45; letter-spacing: -.015em; }
 .ulink { position: relative; white-space: nowrap; }
