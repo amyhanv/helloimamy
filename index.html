@@ -28,9 +28,9 @@
     <section id="about" class="hero">
       <div class="hero__inner">
       <p class="hero__lead">
-        i started as a developer, fell for analytics, and became a technical PM because i wanted to own the why as well as the how.
+        i started as a developer, fell for analytics, and became a product manager who happens to be technical.
       </p>
-      <p class="hero__sub">i make decisions with data and care about products that feel fast, clear, and a little bit delightful.</p>
+      <p class="hero__sub">strongest at ux, speaking engineer, aligning stakeholders, and never losing sight of the user.</p>
       <p class="role">sr. product manager @ <strong>delivra</strong></p>
       </div>
     </section>
@@ -38,22 +38,31 @@
     <!-- Projects -->
     <section id="projects" class="projects">
       <h2 class="section-title">projects</h2>
-      <div class="projects__grid">
-        <article class="card reveal">
-          <button type="button" class="card__tile" id="open-shots" aria-haspopup="dialog" aria-label="View ApplyGen screenshots">
-            <img src="img/applygen-1.png" width="908" height="888" alt="ApplyGen extension popup showing an 87 out of 100 job match and buttons to generate a cover letter, tailor a resume and autofill a job form" loading="lazy" />
-            <span class="card__badge" aria-hidden="true">view all 4 ↗</span>
-          </button>
-          <h3 class="card__title"><a href="https://chromewebstore.google.com/detail/applygen-ai-job-applicati/jmmglbocaffgikdpbkekceejdobdidkc" target="_blank" rel="noopener">applygen <span aria-hidden="true">↗</span></a></h3>
-          <p class="card__desc">a chrome extension that writes cover letters from your resume, autofills job applications, and suggests resume edits</p>
-          <ul class="tags">
-            <li>chrome extension</li>
-            <li>ai</li>
-            <li>autofill</li>
-            <li>resume tailoring</li>
-          </ul>
-        </article>
-      </div>
+      <article class="project reveal">
+        <h3 class="project__title"><a href="https://chromewebstore.google.com/detail/applygen-ai-job-applicati/jmmglbocaffgikdpbkekceejdobdidkc" target="_blank" rel="noopener">applygen <span aria-hidden="true">↗</span></a></h3>
+        <p class="project__sum">a job application assistant i designed and built, shaped by my own job-hunt pain points.</p>
+        <div class="project__cols">
+          <div>
+            <h4>ux design</h4>
+            <p>i mapped the job search end to end, then boiled it down to three moves from one popup: generate a cover letter, tailor a resume, autofill the form. a job match score up front tells you if a role is worth your time.</p>
+          </div>
+          <div>
+            <h4>ui design</h4>
+            <p>a compact, plain-language interface that sits on top of the posting you're already reading. every edit and letter has a preview, so you stay in control before anything goes out.</p>
+          </div>
+          <div>
+            <h4>features, from research</h4>
+            <p>market research, feedback from users and my own frustrations drove the roadmap: personalization controls, saved answers, a job tracker and application history.</p>
+          </div>
+        </div>
+        <ul class="tags">
+          <li>ux design</li>
+          <li>ui design</li>
+          <li>product strategy</li>
+          <li>chrome extension</li>
+          <li>ai</li>
+        </ul>
+      </article>
     </section>
 
     <!-- Contact -->
@@ -62,10 +71,7 @@
       <h2 class="contact__title reveal">get in touch</h2>
       <figure class="contact__art reveal" role="img" aria-label="Illustration by Amy: a figure with long purple hair resting beside two large roses"></figure>
       <div class="contact__info">
-        <div class="pill pill--email">
-          <a class="pill__link" id="email-link" href="#contact" rel="nofollow"><b>email me</b> <span aria-hidden="true">↗</span></a>
-          <button type="button" class="copy" id="copy-email" aria-label="Copy email address">copy</button>
-        </div>
+        <a class="pill" id="email-link" href="#contact" rel="nofollow"><b>email</b> <span aria-hidden="true">↗</span></a>
         <a class="pill" href="https://www.linkedin.com/in/amyhanv/" target="_blank" rel="noopener"><b>linkedin</b> <span aria-hidden="true">↗</span></a>
         <a class="pill" href="https://github.com/amyhanv" target="_blank" rel="noopener"><b>github</b> <span aria-hidden="true">↗</span></a>
       </div>
@@ -75,22 +81,6 @@
       </footer>
     </section>
   </main>
-
-  <dialog id="shots" class="lightbox" aria-label="ApplyGen screenshots">
-    <div class="lb">
-      <div class="lb__bar"><span id="lb-count"></span><button type="button" id="lb-close">close ✕</button></div>
-      <img class="lb__img" id="lb-img" alt="" />
-      <p class="lb__cap" id="lb-cap" style="color:#fff;font-size:.95rem"></p>
-      <div class="lb__nav"><button type="button" id="lb-prev">← prev</button><button type="button" id="lb-next">next →</button></div>
-    </div>
-  </dialog>
-  <ul id="shot-list" hidden>
-    <li data-src="img/applygen-1.png" data-alt="ApplyGen extension popup showing an 87 out of 100 job match" data-cap="the extension: job match score, then generate, tailor or autofill">
-    <li data-src="img/applygen-4.png" data-alt="A generated cover letter with options to download as PDF or DOCX" data-cap="a generated cover letter, ready to download or edit in google docs">
-    <li data-src="img/applygen-3.png" data-alt="Personalize settings with a live letter preview" data-cap="personalize the length, shape and tone, with a live preview">
-    <li data-src="img/applygen-2.png" data-alt="Profile page with resume upload and autofilled details" data-cap="upload a resume once and ApplyGen fills in the rest">
-  </ul>
-
 
   <script src="./js/main.js" defer></script>
 </body>
