@@ -137,8 +137,6 @@ ul { list-style: none; }
 .tile__title a::after { content: ""; position: absolute; inset: 0; }            /* whole tile is the link */
 .tile:hover .tile__title { color: var(--orange); }
 .tile__sum { margin-top: .5rem; font-size: .92rem; line-height: 1.45; color: rgba(17,16,16,.7); }
-.tile__label { margin: 1.2rem 0 .25rem; font-family: var(--mono); font-size: .68rem; font-weight: 400; letter-spacing: .02em; color: var(--orange); }
-.tile__role { font-size: .92rem; line-height: 1.45; color: rgba(17,16,16,.85); }
 @media (max-width: 760px) { .projects__grid { grid-template-columns: 1fr; } }
 .tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: auto; padding-top: 1.4rem; }
 .tags li { padding: .3rem .85rem; border: 1px solid rgba(17,16,16,.18); border-radius: 999px; font-size: .78rem; color: rgba(17,16,16,.7); }
