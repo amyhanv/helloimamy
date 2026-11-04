@@ -1,100 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth scroll-pt-24">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amy Hanvoravongchai</title>
+  <meta name="robots" content="noai, noimageai" />
+  <meta name="description" content="Amy Hanvoravongchai — product manager focused on UX, data, and the people using what we build." />
   <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
-  <!-- Tailwind CSS & AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            heading: ['"Special Gothic Expanded One"','sans-serif'],
-            body: ['"Hubot Sans"','sans-serif'],
-          },
-          colors: {
-            primary: '#000000',
-            accent: '#FF3800'
-          }
-        }
-      }
-    }
-  </script>
-
+  <link rel="preload" href="fonts/ppmori-semibold.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="fonts/dmmono-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="bg-white text-primary font-body overflow-x-hidden">
-  <!-- Top Nav -->
-  <header class="fixed top-0 left-0 w-full px-4 py-1 flex justify-between items-center z-10 bg-white" data-aos="fade-down">
-    <a href="#" class="font-heading md:text-2xl lowercase sm:text-xl">amy hanvoravongchai</a>
-    <nav class="space-x-8 uppercase text-sm tracking-widest font-heading">
-      <a href="#contact" class="hover:text-accent ">contact</a>
-      <a href="#" id="randomize" class="hover:text-accent hidden md:inline-block">random</a>
+<body>
+
+  <header class="nav">
+    <a href="#top" class="nav__name">amy hanvoravongchai</a>
+    <nav class="nav__links">
+      <a href="#projects" id="nav-projects">projects</a>
+      <a href="#contact">contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="flex items-center px-8" data-aos="fade-up" data-aos-delay="100">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-      <div class="relative flex flex-col justify-center h-screen" >
-        <!-- Large Heading -->
-        <h1 class="font-heading text-[clamp(4rem,12vw,12rem)] leading-none lowercase ">
-          hello there 
-        </h1>
-        <!-- Icons -->
-        <div class="flex space-x-4 absolute top-[47%] left-0 transform -translate-y-1/2 hidden md:block" >
-          <span class="text-3xl emoji transition-opacity duration-200 opacity-100">👩🏻‍💻 </span>
-          <span class="text-3xl emoji transition-opacity duration-200 opacity-100">🥂 </span>
-          <span class="text-3xl emoji transition-opacity duration-200 opacity-100">🎨 </span>
-        </div>
-        <!-- Illustration -->
-        <div class="w-full overflow-hidden md:absolute md:bottom-[-200px] md:-ml-20 md:w-5/6 ">
-            <img src="portrait1.png" alt="" />
+  <main id="top">
+
+    <!-- Hero -->
+    <section id="about" class="hero">
+      <div class="hero__inner">
+      <p class="hero__lead">
+        builder at heart. i started as a developer and found my way to product because i wanted to own the why as well as the how.
+      </p>
+      <p class="hero__sub">i like turning messy problems into products that feel simple. off the clock, i'm drawing, baking, or out hiking the pacific northwest.</p>
+      <p class="role">sr. product manager @ <strong>delivra</strong></p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+      <button type="button" class="projects__toggle" id="projects-toggle" aria-expanded="false" aria-controls="projects-panel">
+        <span class="section-title">personal projects</span>
+        <span class="projects__count">1</span>
+        <span class="projects__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="projects__panel" id="projects-panel">
+        <div class="projects__inner">
+          <!-- add more projects by copying a <li class="tile"> -->
+          <ul class="projects__grid">
+            <li class="tile">
+              <h3 class="tile__title"><a href="https://chromewebstore.google.com/detail/applygen-ai-job-applicati/jmmglbocaffgikdpbkekceejdobdidkc" target="_blank" rel="noopener">applygen <span aria-hidden="true">↗</span></a></h3>
+              <p class="tile__sum">a chrome extension that writes cover letters from your resume, autofills job applications, and suggests resume edits.</p>
+              <ul class="tags">
+                <li>ux design</li>
+                <li>ui design</li>
+                <li>product strategy</li>
+                <li>chrome extension</li>
+                <li>ai</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
-      <!-- About Bio -->
-      <div class="flex flex-col justify-center space-y-8" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-2xl md:text-3xl leading-snug">
-          <strong>builder at heart:</strong> i’m a dev-turned-PM driven to craft user-first experiences + products with data-backed decisions. My background in development and analytics fuels my passion for snappy, performance-based UX.
-        </p>
-        <p class="text-3xl md:text-4xl leading-tight text-accent font-heading">
-          technical PM at the intersection of business, technology, and design
-        </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="blobs blobs--soft" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+      <h2 class="contact__title reveal">get in touch</h2>
+      <figure class="contact__art" id="drag-art" role="img" aria-label="Illustration by Amy: a figure with long purple hair resting beside two large roses"></figure>
+      <div class="contact__info">
+        <p class="contact__text">always happy to talk product, ux, or building things. say hi by <a class="ulink" id="email-link" href="#contact" rel="nofollow">email<span aria-hidden="true">&#8599;</span></a>, or find me on <a class="ulink" href="https://www.linkedin.com/in/amyhanv/" target="_blank" rel="noopener">linkedin<span aria-hidden="true">&#8599;</span></a> and <a class="ulink" href="https://github.com/amyhanv" target="_blank" rel="noopener">github<span aria-hidden="true">&#8599;</span></a>.</p>
       </div>
-    </div>
-  </section>
+      <footer class="foot">
+        <span>Copyright © <span id="year">2026</span> Amy Hanvoravongchai. All rights reserved.</span>
+      </footer>
+    </section>
+  </main>
 
-  <!-- Contact Section -->
-  <section id="contact" class="min-h-screen flex flex-col md:items-center justify-center px-8" data-aos="fade-down" data-aos-delay="200">
-    <h2 class="font-heading text-5xl lowercase text-accent mb-8">get in touch</h2>
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-start md:gap-9 font-medium">
-      <a href="mailto:amy.hanv@gmail.com" class="hover:underline">amyhanv@gmail.com</a>
-      <a href="https://www.linkedin.com/in/amyhanv/" target="_blank" rel="noopener" class="hover:underline">linkedin</a>
-      <a href="https://github.com/amyhanv" target="_blank" rel="noopener" class="hover:underline">github</a>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="w-full text-center py-4 text-xs uppercase tracking-widest text-gray-500 font-body">
-    © 2025 amy hanvoravongchai
-  </footer>
-
-  <!-- AOS Initialization -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
-  </script>
-
-<script src="./js/main.js" defer></script>
-
-
+  <script src="./js/main.js" defer></script>
 </body>
 </html>
