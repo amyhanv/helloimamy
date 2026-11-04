@@ -47,46 +47,64 @@ document.addEventListener('DOMContentLoaded', () => {
   if (location.hash === '#projects') set(true);
 });
 
-// Fun little extra: the illustration in "get in touch" can be dragged around
-// (kept inside its section) and tilts with how fast you fling it.
+// Fun little extra: the illustration in "get in touch" can be dragged anywhere on
+// the page. It tilts with how fast you fling it, and the page scrolls along when
+// you drag near the top or bottom edge of the window.
 document.addEventListener('DOMContentLoaded', () => {
   const art = document.getElementById('drag-art');
-  const sec = document.getElementById('contact');
-  if (!art || !sec) return;
+  if (!art) return;
 
-  let x = 0, y = 0, sx = 0, sy = 0, bounds = null, lastX = 0, tilt = 0, dragging = false;
+  let x = 0, y = 0;                       // current offset from the art's home position
+  let cx = 0, cy = 0, gx = 0, gy = 0;     // pointer (viewport) + where we grabbed it
+  let bounds = null, lastX = 0, tilt = 0, dragging = false, raf = 0;
 
+  const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
   const apply = () => { art.style.translate = `${x}px ${y}px`; };
+
+  const update = () => {
+    x = clamp(cx + scrollX - gx, bounds.minX, bounds.maxX);
+    y = clamp(cy + scrollY - gy, bounds.minY, bounds.maxY);
+    apply();
+  };
+
+  const loop = () => {
+    if (!dragging) return;
+    const edge = 70, speed = 14;
+    if (cy < edge) scrollBy({ top: -speed, behavior: 'instant' });
+    else if (cy > innerHeight - edge) scrollBy({ top: speed, behavior: 'instant' });
+    update();
+    raf = requestAnimationFrame(loop);
+  };
 
   art.addEventListener('pointerdown', (e) => {
     dragging = true;
     art.setPointerCapture(e.pointerId);
     art.classList.add('dragging');
-    sx = e.clientX - x; sy = e.clientY - y; lastX = e.clientX;
-    // where the art would sit with no offset, so we can keep it inside the section
-    const a = art.getBoundingClientRect(), s = sec.getBoundingClientRect();
-    bounds = {
-      minX: s.left - (a.left - x), maxX: s.right - (a.right - x),
-      minY: s.top - (a.top - y),   maxY: s.bottom - (a.bottom - y),
-    };
+    cx = e.clientX; cy = e.clientY; lastX = cx;
+    gx = cx + scrollX - x; gy = cy + scrollY - y;
+    // where the art sits with no offset, in page coordinates → keeps it on the page
+    const r = art.getBoundingClientRect();
+    const homeX = r.left + scrollX - x, homeY = r.top + scrollY - y;
+    const pageW = document.documentElement.clientWidth, pageH = document.documentElement.scrollHeight;
+    bounds = { minX: -homeX, maxX: pageW - r.width - homeX, minY: -homeY, maxY: pageH - r.height - homeY };
     e.preventDefault();
+    cancelAnimationFrame(raf); raf = requestAnimationFrame(loop);
   });
 
   art.addEventListener('pointermove', (e) => {
     if (!dragging) return;
-    x = Math.min(bounds.maxX, Math.max(bounds.minX, e.clientX - sx));
-    y = Math.min(bounds.maxY, Math.max(bounds.minY, e.clientY - sy));
-    tilt += ((Math.max(-8, Math.min(8, (e.clientX - lastX) * 0.6))) - tilt) * 0.3;
-    lastX = e.clientX;
+    cx = e.clientX; cy = e.clientY;
+    tilt += (clamp((cx - lastX) * 0.6, -8, 8) - tilt) * 0.3;
+    lastX = cx;
     art.style.rotate = `${tilt}deg`;
-    apply();
   });
 
   const end = () => {
     if (!dragging) return;
     dragging = false; tilt = 0;
+    cancelAnimationFrame(raf);
     art.classList.remove('dragging');
-    art.style.rotate = '';           // eases back to level (CSS transition)
+    art.style.rotate = '';                // eases back to level
   };
   art.addEventListener('pointerup', end);
   art.addEventListener('pointercancel', end);
