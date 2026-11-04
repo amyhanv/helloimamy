@@ -155,8 +155,14 @@ ul { list-style: none; }
   grid-column: 10 / 13; grid-row: 1 / 4; align-self: stretch; justify-self: end;
   width: 100%; max-width: 15rem; min-height: 16rem;
   background: url("../portrait.jpg") center / cover no-repeat;
-  z-index: 1;
+  z-index: 3;
+  cursor: grab; user-select: none; -webkit-user-select: none;
+  transition: rotate .6s var(--ease), box-shadow .3s var(--ease);
+  will-change: translate, rotate;
 }
+@media (pointer: fine) { .contact__art { touch-action: none; } }
+.contact__art:hover { rotate: -1.5deg; }
+.contact__art.dragging { cursor: grabbing; transition: box-shadow .3s var(--ease); box-shadow: 0 18px 40px rgba(17,16,16,.18); }
 .contact__title {
   grid-column: 1 / 6; grid-row: 1;
   position: relative; z-index: 2;
@@ -178,7 +184,6 @@ ul { list-style: none; }
   padding: clamp(2.5rem, 5vw, 4rem) 0 1.8rem;
   font-family: var(--mono); font-size: .72rem; letter-spacing: .02em; color: rgba(17,16,16,.5);
 }
-.foot a:hover { color: var(--orange); }
 
 @media (max-width: 760px) {
   .contact { grid-template-rows: auto auto auto auto; row-gap: 1.4rem; }
