@@ -12,6 +12,7 @@
   --paper:  #fbfaf7;
   --ink:    #111010;
   --orange: #ff3800;
+  --tint:   #fdece4;
 
   --pad: clamp(1rem, 3.2vw, 3rem);
   --line: 1px solid rgba(17,16,16,.14);
@@ -99,7 +100,7 @@ ul { list-style: none; }
 /* ── Contact ─────────────────────────────────── */
 .contact {
   position: relative;
-  background: var(--orange); color: var(--ink);
+  background: var(--tint); color: var(--ink);
   display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: auto 1fr auto; column-gap: 1rem;
   padding: clamp(3rem, 7vw, 6rem) var(--pad) clamp(3rem, 6vw, 5rem);
 }
@@ -120,22 +121,22 @@ ul { list-style: none; }
 .pill {
   display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
   width: min(100%, 22rem);
-  padding: .8rem 1.3rem; border: 1px solid rgba(17,16,16,.4); border-radius: 999px;
+  padding: .8rem 1.3rem; border: 1px solid rgba(17,16,16,.18); border-radius: 999px;
   font-size: clamp(1rem, 1.4vw, 1.15rem); letter-spacing: -.01em;
   transition: background-color .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease);
 }
 .pill b { font-weight: 400; }
 .pill span { transition: transform .35s var(--ease); }
-.pill:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.pill:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
 .pill:hover span { transform: translate(2px, -2px); }
 
 .foot {
   display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
   padding: 1.5rem var(--pad) 2rem;
-  background: var(--orange);
-  font-size: .85rem; color: rgba(17,16,16,.65);
+  background: var(--tint);
+  font-size: .85rem; color: rgba(17,16,16,.5);
 }
-.foot a:hover { color: var(--paper); }
+.foot a:hover { color: var(--orange); }
 
 /* ── Scroll reveal (JS adds .in) ─────────────── */
 .js .reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
