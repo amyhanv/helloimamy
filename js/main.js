@@ -30,3 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 });
+
+// Projects start collapsed; the section header or the nav link opens them.
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('projects-toggle');
+  const panel = document.getElementById('projects-panel');
+  if (!toggle || !panel) return;
+
+  const set = (open) => {
+    panel.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+
+  toggle.addEventListener('click', () => set(!panel.classList.contains('open')));
+  document.getElementById('nav-projects')?.addEventListener('click', () => set(true));
+  if (location.hash === '#projects') set(true);
+});
